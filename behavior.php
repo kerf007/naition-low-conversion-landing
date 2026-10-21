@@ -11,6 +11,8 @@ const ALLOWED_EVENTS = [
     'program_view' => [''],
     'pricing_view' => [''],
     'form_view' => [''],
+    'form_field_view' => [''],
+    'form_submit_view' => [''],
     'scroll_depth' => ['25', '50', '75'],
     'cta_click' => ['hero', 'pricing_1', 'pricing_2', 'pricing_3'],
     'pricing_link_click' => [''],
@@ -62,10 +64,32 @@ try {
             'SELECT event_name, detail, COUNT(*) AS hits, COUNT(DISTINCT session_id) AS sessions
              FROM behavior_events GROUP BY event_name, detail ORDER BY event_name, detail'
         )->fetchAll(PDO::FETCH_ASSOC);
+        $cohorts = $pdo->query(
+            "SELECT COUNT(*) AS sessions,
+                    COALESCE(SUM(page_view), 0) AS page_view,
+                    COALESCE(SUM(page_view * cta_click), 0) AS page_and_cta,
+                    COALESCE(SUM(cta_click * form_view), 0) AS cta_and_form_heading,
+                    COALESCE(SUM(cta_click * form_field_view), 0) AS cta_and_first_field,
+                    COALESCE(SUM(cta_click * form_submit_view), 0) AS cta_and_submit_button,
+                    COALESCE(SUM(cta_click * form_start), 0) AS cta_and_form_start,
+                    COALESCE(SUM(form_start * form_success), 0) AS started_and_succeeded
+             FROM (
+                 SELECT session_id,
+                        MAX(event_name = 'page_view') AS page_view,
+                        MAX(event_name = 'cta_click') AS cta_click,
+                        MAX(event_name = 'form_view') AS form_view,
+                        MAX(event_name = 'form_field_view') AS form_field_view,
+                        MAX(event_name = 'form_submit_view') AS form_submit_view,
+                        MAX(event_name = 'form_start') AS form_start,
+                        MAX(event_name = 'form_success') AS form_success
+                 FROM behavior_events GROUP BY session_id
+             )"
+        )->fetch(PDO::FETCH_ASSOC);
 
         respond(200, [
             'events' => $events,
             'details' => $details,
+            'cohorts' => $cohorts,
             'generated_at' => gmdate(DATE_ATOM),
         ]);
     }

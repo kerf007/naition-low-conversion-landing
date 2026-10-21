@@ -54,13 +54,14 @@ img {
 }
 
 .hero {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     background:
         radial-gradient(circle at top right, rgba(184, 212, 227, 0.45), transparent 35%),
         radial-gradient(circle at bottom left, rgba(245, 198, 214, 0.35), transparent 30%),
         var(--bg-main);
-    padding: 64px 0 72px;
+    padding: 80px 0 96px;
 }
 
 .hero-content {
@@ -78,49 +79,23 @@ img {
 }
 
 .hero h1 {
-    margin: 0 0 20px;
+    margin: 0 0 24px;
     font-size: clamp(2.4rem, 6vw, 4rem);
     line-height: 1.1;
     color: var(--heading);
 }
 
 .hero-text {
-    margin: 0 0 24px;
+    margin: 0 0 32px;
     font-size: 1.15rem;
     max-width: 680px;
-}
-
-.hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    flex-wrap: wrap;
-}
-
-.btn-register.hero-register {
-    width: auto;
-    min-width: 220px;
-    background: #2f6f5d;
-    color: var(--white);
-}
-
-.hero-secondary {
-    color: #225a4a;
-    font-weight: 700;
-    text-underline-offset: 4px;
-}
-
-.hero-price {
-    margin: 14px 0 0;
-    color: var(--heading);
-    font-weight: 600;
 }
 
 .meta-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 18px;
-    margin-top: 28px;
+    margin-top: 40px;
 }
 
 .meta-card {
@@ -140,7 +115,7 @@ img {
 }
 
 .hero-note {
-    margin-top: 24px;
+    margin-top: 36px;
     padding: 24px 28px;
     border-radius: 18px;
     background: var(--peach);
@@ -397,16 +372,8 @@ img {
 }
 
 .form-grid textarea {
-    min-height: 96px;
+    min-height: 140px;
     resize: vertical;
-}
-
-.btn:focus-visible,
-.hero-secondary:focus-visible,
-.form-grid input:focus-visible,
-.form-grid textarea:focus-visible {
-    outline: 3px solid #225a4a;
-    outline-offset: 3px;
 }
 
 .form-message {
@@ -436,15 +403,53 @@ img {
     }
 
     .hero {
-        padding: 40px 0 56px;
-    }
-
-    .btn-register.hero-register {
-        width: 100%;
+        min-height: auto;
+        padding-top: 56px;
     }
 
     .registration-panel,
     .hero-note {
         padding: 24px;
+    }
+}
+
+@media (min-width: 721px) {
+    .registration-section {
+        padding: 48px 0;
+    }
+
+    .registration-panel {
+        padding: 28px;
+    }
+
+    .registration-panel .section-title {
+        margin-bottom: 8px;
+    }
+
+    .registration-panel .section-lead {
+        margin-bottom: 16px;
+    }
+
+    .registration-panel .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .registration-panel .form-grid label {
+        gap: 4px;
+    }
+
+    .registration-panel .form-grid label:nth-child(n + 3),
+    .registration-panel .form-grid button {
+        grid-column: 1 / -1;
+    }
+
+    .registration-panel .form-grid input,
+    .registration-panel .form-grid textarea {
+        padding: 10px 14px;
+    }
+
+    .registration-panel .form-grid textarea {
+        min-height: 76px;
     }
 }

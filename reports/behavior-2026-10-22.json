@@ -1,0 +1,221 @@
+{
+  "events": [
+    {
+      "event_name": "cta_click",
+      "hits": 181,
+      "sessions": 181
+    },
+    {
+      "event_name": "cta_view",
+      "hits": 457,
+      "sessions": 201
+    },
+    {
+      "event_name": "field_focus",
+      "hits": 80,
+      "sessions": 20
+    },
+    {
+      "event_name": "form_abandon",
+      "hits": 1,
+      "sessions": 1
+    },
+    {
+      "event_name": "form_start",
+      "hits": 20,
+      "sessions": 20
+    },
+    {
+      "event_name": "form_submit",
+      "hits": 19,
+      "sessions": 19
+    },
+    {
+      "event_name": "form_submit_click",
+      "hits": 19,
+      "sessions": 19
+    },
+    {
+      "event_name": "form_success",
+      "hits": 19,
+      "sessions": 19
+    },
+    {
+      "event_name": "form_view",
+      "hits": 181,
+      "sessions": 181
+    },
+    {
+      "event_name": "page_exit",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "page_view",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "pricing_view",
+      "hits": 94,
+      "sessions": 94
+    },
+    {
+      "event_name": "program_view",
+      "hits": 1,
+      "sessions": 1
+    },
+    {
+      "event_name": "scroll_depth",
+      "hits": 574,
+      "sessions": 201
+    }
+  ],
+  "details": [
+    {
+      "event_name": "cta_click",
+      "detail": "hero",
+      "hits": 181,
+      "sessions": 181
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "hero",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "pricing_1",
+      "hits": 85,
+      "sessions": 85
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "pricing_2",
+      "hits": 85,
+      "sessions": 85
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "pricing_3",
+      "hits": 86,
+      "sessions": 86
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "email",
+      "hits": 20,
+      "sessions": 20
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "name",
+      "hits": 20,
+      "sessions": 20
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "phone",
+      "hits": 20,
+      "sessions": 20
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "purpose",
+      "hits": 20,
+      "sessions": 20
+    },
+    {
+      "event_name": "form_abandon",
+      "detail": "",
+      "hits": 1,
+      "sessions": 1
+    },
+    {
+      "event_name": "form_start",
+      "detail": "",
+      "hits": 20,
+      "sessions": 20
+    },
+    {
+      "event_name": "form_submit",
+      "detail": "",
+      "hits": 19,
+      "sessions": 19
+    },
+    {
+      "event_name": "form_submit_click",
+      "detail": "",
+      "hits": 19,
+      "sessions": 19
+    },
+    {
+      "event_name": "form_success",
+      "detail": "",
+      "hits": 19,
+      "sessions": 19
+    },
+    {
+      "event_name": "form_view",
+      "detail": "",
+      "hits": 181,
+      "sessions": 181
+    },
+    {
+      "event_name": "page_exit",
+      "detail": "30_to_60s",
+      "hits": 171,
+      "sessions": 171
+    },
+    {
+      "event_name": "page_exit",
+      "detail": "over_60s",
+      "hits": 29,
+      "sessions": 29
+    },
+    {
+      "event_name": "page_exit",
+      "detail": "under_10s",
+      "hits": 1,
+      "sessions": 1
+    },
+    {
+      "event_name": "page_view",
+      "detail": "desktop",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "pricing_view",
+      "detail": "",
+      "hits": 94,
+      "sessions": 94
+    },
+    {
+      "event_name": "program_view",
+      "detail": "",
+      "hits": 1,
+      "sessions": 1
+    },
+    {
+      "event_name": "scroll_depth",
+      "detail": "25",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "scroll_depth",
+      "detail": "50",
+      "hits": 192,
+      "sessions": 192
+    },
+    {
+      "event_name": "scroll_depth",
+      "detail": "75",
+      "hits": 181,
+      "sessions": 181
+    }
+  ],
+  "generated_at": "2026-10-21T21:05:14+00:00"
+}

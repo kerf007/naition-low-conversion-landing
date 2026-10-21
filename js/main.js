@@ -94,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         observe(document.querySelector('.program-list')?.closest('section')?.querySelector('.section-title'), 'program_view');
         observe(document.querySelector('.pricing-section .section-title'), 'pricing_view');
         observe(document.querySelector('#registration .section-title'), 'form_view');
+        observe(document.querySelector('#registration-form input[name="name"]'), 'form_field_view');
+        observe(document.querySelector('#registration-form button[type="submit"]'), 'form_submit_view');
 
         document.querySelectorAll('.pricing-card .btn-register').forEach((button, index) => {
             observe(button, 'cta_view', `pricing_${index + 1}`);
