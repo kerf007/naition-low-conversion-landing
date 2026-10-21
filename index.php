@@ -33,6 +33,11 @@
                 медиков. Курс построен на практике с инструкторами, которые каждый день работают
                 с реальными вызовами.
             </p>
+            <div class="hero-actions">
+                <button type="button" class="btn btn-register hero-register">Оставить заявку на базовый курс</button>
+                <a class="hero-secondary" href="#pricing">Сравнить тарифы</a>
+            </div>
+            <p class="hero-price">4 900 ₽ · очный курс 10:00–18:00 · заявка без оплаты</p>
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
@@ -301,7 +306,7 @@
             </div>
         </section>
 
-        <section class="section pricing-section">
+        <section class="section pricing-section" id="pricing">
             <div class="container">
                 <h2 class="section-title">Тарифы</h2>
                 <p class="section-lead">
@@ -346,7 +351,7 @@
             <div class="container">
                 <div class="registration-panel">
                     <h2 class="section-title">Записаться на курс</h2>
-                    <p class="section-lead">
+                    <p class="section-lead" id="registration-summary" aria-live="polite">
                         21 ноября · от 4 900 ₽. Заявка без оплаты — тариф и место подтвердим по телефону.
                     </p>
                     <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
@@ -363,8 +368,8 @@
                             <input type="email" name="email" required autocomplete="email">
                         </label>
                         <label>
-                            Цель прохождения курса
-                            <textarea name="purpose" required></textarea>
+                            Для чего вам курс? Достаточно пары слов
+                            <textarea name="purpose" required placeholder="Например: хочу уметь помочь близким"></textarea>
                         </label>
                         <button type="submit" class="btn">Отправить заявку</button>
                     </form>

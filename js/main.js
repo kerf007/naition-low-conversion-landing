@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registrationSection = document.getElementById('registration');
     const form = document.getElementById('registration-form');
     const message = document.getElementById('form-message');
+    const registrationSummary = document.getElementById('registration-summary');
     const registerButtons = document.querySelectorAll('.btn-register');
     const sessionId = window.crypto?.randomUUID?.() ?? null;
     const sentEvents = new Set();
@@ -192,6 +193,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? Array.from(document.querySelectorAll('.pricing-card')).indexOf(pricingCard) + 1
                 : 0;
             track('cta_click', pricingIndex ? `pricing_${pricingIndex}` : 'hero');
+
+            const selectedCard = pricingCard ?? document.querySelector('.pricing-card');
+            const tariffName = selectedCard?.querySelector('h3')?.textContent?.trim();
+            const tariffPrice = selectedCard?.querySelector('.price')?.textContent?.trim();
+            if (registrationSummary && tariffName && tariffPrice) {
+                registrationSummary.textContent = `21 ноября · ${tariffName} — ${tariffPrice}. Заявка без оплаты; тариф и место подтвердим по телефону.`;
+            }
 
             if (!registrationSection) {
                 return;

@@ -91,6 +91,38 @@ img {
     max-width: 680px;
 }
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-register.hero-register {
+    width: auto;
+    min-width: 260px;
+    background: #2f6f5d;
+    color: var(--white);
+}
+
+.hero-secondary {
+    color: #225a4a;
+    font-weight: 700;
+    text-underline-offset: 4px;
+}
+
+.hero-price {
+    margin: 14px 0 0;
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.btn:focus-visible,
+.hero-secondary:focus-visible {
+    outline: 3px solid #225a4a;
+    outline-offset: 3px;
+}
+
 .meta-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -405,6 +437,10 @@ img {
     .hero {
         min-height: auto;
         padding-top: 56px;
+    }
+
+    .btn-register.hero-register {
+        width: 100%;
     }
 
     .registration-panel,
