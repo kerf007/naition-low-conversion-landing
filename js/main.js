@@ -3,9 +3,148 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('registration-form');
     const message = document.getElementById('form-message');
     const registerButtons = document.querySelectorAll('.btn-register');
+    const sessionId = window.crypto?.randomUUID?.() ?? null;
+    const sentEvents = new Set();
+    const startedAt = performance.now();
+    let formStarted = false;
+    let formSucceeded = false;
+    let exitTracked = false;
+
+    const track = (event, detail = '') => {
+        if (!sessionId) {
+            return;
+        }
+
+        try {
+            const payload = new Blob([JSON.stringify({ session_id: sessionId, event, detail })], {
+                type: 'application/json',
+            });
+
+            if (navigator.sendBeacon?.('behavior.php', payload)) {
+                return;
+            }
+
+            fetch('behavior.php', {
+                method: 'POST',
+                body: payload,
+                keepalive: true,
+            }).catch(() => {});
+        } catch (_) {
+            // Analytics must not interrupt navigation or form submission.
+        }
+    };
+
+    const trackOnce = (event, detail = '') => {
+        const key = `${event}:${detail}`;
+        if (sentEvents.has(key)) {
+            return;
+        }
+
+        sentEvents.add(key);
+        track(event, detail);
+    };
+
+    const viewport = window.innerWidth < 720 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop';
+    trackOnce('page_view', viewport);
+
+    const setupVisibilityTracking = () => {
+        if (!('IntersectionObserver' in window)) {
+            return;
+        }
+
+        const observed = new Map();
+        const pending = new Map();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const timer = pending.get(entry.target);
+                if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
+                    clearTimeout(timer);
+                    pending.delete(entry.target);
+                    return;
+                }
+
+                if (timer) {
+                    return;
+                }
+
+                pending.set(entry.target, setTimeout(() => {
+                    const item = observed.get(entry.target);
+                    if (!item) {
+                        return;
+                    }
+
+                    const [event, detail] = item;
+                    trackOnce(event, detail);
+                    observer.unobserve(entry.target);
+                    pending.delete(entry.target);
+                }, 500));
+            });
+        }, { threshold: [0, 0.5] });
+
+        const observe = (element, event, detail = '') => {
+            if (!element) {
+                return;
+            }
+
+            observed.set(element, [event, detail]);
+            observer.observe(element);
+        };
+
+        observe(document.querySelector('.hero-register'), 'cta_view', 'hero');
+        observe(document.querySelector('.program-list')?.closest('section')?.querySelector('.section-title'), 'program_view');
+        observe(document.querySelector('.pricing-section .section-title'), 'pricing_view');
+        observe(document.querySelector('#registration .section-title'), 'form_view');
+
+        document.querySelectorAll('.pricing-card .btn-register').forEach((button, index) => {
+            observe(button, 'cta_view', `pricing_${index + 1}`);
+        });
+    };
+
+    try {
+        setupVisibilityTracking();
+    } catch (_) {
+        // Missing visibility APIs must not affect the registration path.
+    }
+
+    const trackScrollDepth = () => {
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 100;
+        [25, 50, 75].forEach((milestone) => {
+            if (percent >= milestone) {
+                trackOnce('scroll_depth', String(milestone));
+            }
+        });
+    };
+
+    window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    trackScrollDepth();
+
+    window.addEventListener('pagehide', () => {
+        if (exitTracked) {
+            return;
+        }
+
+        exitTracked = true;
+        const seconds = (performance.now() - startedAt) / 1000;
+        const duration = seconds < 10 ? 'under_10s' : seconds < 30 ? '10_to_30s' : seconds < 60 ? '30_to_60s' : 'over_60s';
+        trackOnce('page_exit', duration);
+        if (formStarted && !formSucceeded) {
+            trackOnce('form_abandon');
+        }
+    });
+
+    document.querySelector('.hero-secondary')?.addEventListener('click', () => {
+        track('pricing_link_click');
+    });
 
     registerButtons.forEach((button) => {
         button.addEventListener('click', () => {
+            const pricingCard = button.closest('.pricing-card');
+            const pricingIndex = pricingCard
+                ? Array.from(document.querySelectorAll('.pricing-card')).indexOf(pricingCard) + 1
+                : 0;
+            track('cta_click', pricingIndex ? `pricing_${pricingIndex}` : 'hero');
+
             if (!registrationSection) {
                 return;
             }
@@ -18,8 +157,38 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    form.addEventListener('focusin', (event) => {
+        const field = event.target;
+        if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) {
+            return;
+        }
+
+        trackOnce('field_focus', field.name);
+    });
+
+    form.addEventListener('input', (event) => {
+        const field = event.target;
+        if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) {
+            return;
+        }
+
+        formStarted = true;
+        trackOnce('form_start');
+    });
+
+    form.addEventListener('invalid', (event) => {
+        track('form_invalid', event.target.name);
+    }, true);
+
+    form.querySelector('button[type="submit"]')?.addEventListener('click', () => {
+        track('form_submit_click');
+    });
+
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
+        formStarted = true;
+        trackOnce('form_start');
+        track('form_submit');
 
         const submitButton = form.querySelector('button[type="submit"]');
         const formData = new FormData(form);
@@ -33,12 +202,14 @@ document.addEventListener('DOMContentLoaded', () => {
             message.className = 'form-message';
         }
 
+        let errorKind = 'network';
         try {
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: formData,
             });
 
+            errorKind = 'response';
             const data = await response.json();
 
             if (!response.ok || !data.ok) {
@@ -50,8 +221,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 message.className = 'form-message success';
             }
 
+            track('form_success');
+            formSucceeded = true;
             form.reset();
         } catch (error) {
+            track('form_error', errorKind);
             if (message) {
                 message.textContent = error instanceof Error ? error.message : 'Не удалось отправить заявку.';
                 message.className = 'form-message error';
