@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let formStarted = false;
     let formSucceeded = false;
     let exitTracked = false;
+    let maxScrollY = Math.max(0, Math.round(window.scrollY));
+    let activeSection = '';
 
     const track = (event, detail = '') => {
         if (!sessionId) {
@@ -16,7 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const payload = new Blob([JSON.stringify({ session_id: sessionId, event, detail })], {
+            const scrollY = Math.max(0, Math.round(window.scrollY));
+            maxScrollY = Math.max(maxScrollY, scrollY);
+            const pageHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+            const payload = new Blob([JSON.stringify({
+                session_id: sessionId,
+                event,
+                detail,
+                elapsed_ms: Math.max(0, Math.round(performance.now() - startedAt)),
+                scroll_y: scrollY,
+                max_scroll_y: maxScrollY,
+                page_height: pageHeight,
+                viewport_height: window.innerHeight,
+            })], {
                 type: 'application/json',
             });
 
@@ -109,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const trackScrollDepth = () => {
+        maxScrollY = Math.max(maxScrollY, Math.max(0, Math.round(window.scrollY)));
         const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
         const percent = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 100;
         [25, 50, 75].forEach((milestone) => {
@@ -116,10 +131,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 trackOnce('scroll_depth', String(milestone));
             }
         });
+        [10, 25, 50, 75, 90, 100].forEach((milestone) => {
+            if (percent >= milestone) {
+                trackOnce('scroll_checkpoint', String(milestone));
+            }
+        });
+
+        const sections = document.querySelectorAll('header.hero, main > section');
+        const marker = window.scrollY + window.innerHeight * 0.35;
+        const sectionIndex = Array.from(sections).findIndex((section) =>
+            section.offsetTop <= marker && marker < section.offsetTop + section.offsetHeight);
+        const sectionId = sectionIndex < 0 ? '' : `s${sectionIndex + 1}`;
+        if (sectionId && sectionId !== activeSection) {
+            activeSection = sectionId;
+            track('section_enter', sectionId);
+        }
     };
 
     window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    window.addEventListener('resize', trackScrollDepth, { passive: true });
     trackScrollDepth();
+
+    const contentSelectors = [
+        '.meta-card', '.feature-card', '.program-module', '.injury-card',
+        '.legal-block', '.instructor-card', '.pricing-card',
+    ];
+    document.addEventListener('click', (event) => {
+        if (!(event.target instanceof Element) || event.target.closest('a, button, input, textarea, select')) {
+            return;
+        }
+
+        const selector = contentSelectors.find((item) => event.target.closest(item));
+        if (selector) {
+            track('content_click', selector);
+        }
+    });
 
     window.addEventListener('pagehide', () => {
         if (exitTracked) {
@@ -176,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         formStarted = true;
         trackOnce('form_start');
+        trackOnce('field_input', field.name);
     });
 
     form.addEventListener('invalid', (event) => {
