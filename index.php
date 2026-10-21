@@ -25,7 +25,7 @@
 <body>
     <header class="hero">
         <div class="container hero-content">
-            <span class="hero-badge">Офлайн-курс · 15 августа 2026</span>
+            <span class="hero-badge">Офлайн-курс · 21 ноября 2026</span>
             <h1>Первая помощь: практический курс для каждого</h1>
             <p class="hero-text">
                 Научитесь действовать уверенно в экстренной ситуации: остановить кровотечение,
@@ -36,7 +36,7 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
-                    15 августа 2026, суббота
+                    21 ноября 2026, суббота
                 </div>
                 <div class="meta-card">
                     <strong>Время</strong>
@@ -347,7 +347,7 @@
                 <div class="registration-panel">
                     <h2 class="section-title">Записаться на курс</h2>
                     <p class="section-lead">
-                        Оставьте заявку, и мы свяжемся с вами, чтобы подтвердить место и ответить на вопросы.
+                        21 ноября · от 4 900 ₽. Заявка без оплаты — тариф и место подтвердим по телефону.
                     </p>
                     <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
                         <label>
