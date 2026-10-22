@@ -80,12 +80,12 @@
                             <input type="tel" name="phone" required autocomplete="tel">
                         </label>
                         <label>
-                            E-mail
-                            <input type="email" name="email" required autocomplete="email">
+                            E-mail (необязательно)
+                            <input type="email" name="email" autocomplete="email">
                         </label>
                         <label>
-                            Для чего вам курс? Достаточно пары слов
-                            <textarea name="purpose" required placeholder="Например: хочу уметь помочь близким"></textarea>
+                            Для чего вам курс? (необязательно)
+                            <textarea name="purpose" placeholder="Например: хочу уметь помочь близким"></textarea>
                         </label>
                         <button type="submit" class="btn">Отправить заявку</button>
                     </form>

@@ -28,13 +28,8 @@ if ($phone === '') {
     exit;
 }
 
-if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode(['ok' => false, 'error' => 'Укажите корректный e-mail.'], JSON_UNESCAPED_UNICODE);
-    exit;
-}
-
-if ($purpose === '') {
-    echo json_encode(['ok' => false, 'error' => 'Укажите цель прохождения курса.'], JSON_UNESCAPED_UNICODE);
     exit;
 }
 

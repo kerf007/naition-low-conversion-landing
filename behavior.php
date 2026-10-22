@@ -81,8 +81,8 @@ function buildVisits(array $rows): array
     $inputNodes = [
         ['selector' => '#registration-form [name="name"]', 'name' => 'name', 'type' => 'text', 'required' => true],
         ['selector' => '#registration-form [name="phone"]', 'name' => 'phone', 'type' => 'tel', 'required' => true],
-        ['selector' => '#registration-form [name="email"]', 'name' => 'email', 'type' => 'email', 'required' => true],
-        ['selector' => '#registration-form [name="purpose"]', 'name' => 'purpose', 'type' => 'textarea', 'required' => true],
+        ['selector' => '#registration-form [name="email"]', 'name' => 'email', 'type' => 'email', 'required' => false],
+        ['selector' => '#registration-form [name="purpose"]', 'name' => 'purpose', 'type' => 'textarea', 'required' => false],
     ];
 
     foreach ($rows as $row) {
