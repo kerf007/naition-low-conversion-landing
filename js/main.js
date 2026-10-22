@@ -208,6 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const inclusions = Array.from(selectedCard.querySelectorAll('.pricing-list li'))
                     .map((item) => item.textContent.trim());
                 registrationSummary.querySelector('#registration-inclusions').textContent = `${inclusions.join('. ')}.`;
+                const terms = registrationSummary.querySelector('#registration-terms');
+                if (terms) {
+                    terms.textContent = selectedCard.querySelector('.pricing-terms')?.textContent?.trim() ?? '';
+                    terms.hidden = !terms.textContent;
+                }
             }
 
             if (!registrationSection) {
@@ -215,7 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             document.querySelector('.tariff-comparison')?.removeAttribute('open');
-            registrationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+            registrationSection.scrollIntoView({ behavior, block: 'start' });
         });
     });
 

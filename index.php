@@ -4,7 +4,19 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Первая помощь: практический курс для каждого</title>
+    <title>Курс первой помощи в Москве — практика за один день</title>
+    <meta name="description" content="Очный курс первой помощи в Москве: СЛР, помощь при травмах, кровотечениях и ожогах. 21 ноября 2026, 10:00–18:00. От 4 900 ₽, заявка без оплаты.">
+    <link rel="canonical" href="https://kerf007.naition.sortedmap.ru/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Курс первой помощи в Москве — практика за один день">
+    <meta property="og:description" content="21 ноября 2026 · 10:00–18:00. Практика с инструктором, сертификат и памятка. От 4 900 ₽. Заявка без оплаты.">
+    <meta property="og:url" content="https://kerf007.naition.sortedmap.ru/">
+    <meta property="og:image" content="https://kerf007.naition.sortedmap.ru/images/cpr-training.jpg">
+    <meta property="og:image:alt" content="Практика сердечно-легочной реанимации на манекене">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1067">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
     <script src="api/visit.php" defer></script>
     <script src="js/main.js" defer></script>
@@ -19,25 +31,36 @@
 
         ym(113678602, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/113678602" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/113678602" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <header class="hero">
         <div class="container hero-content">
-            <span class="hero-badge">Офлайн-курс · 21 ноября 2026</span>
-            <h1>Первая помощь: практический курс для каждого</h1>
-            <p class="hero-text">
-                Научитесь действовать уверенно в экстренной ситуации: остановить кровотечение,
-                провести сердечно-легочную реанимацию, помочь при травмах и ожогах до приезда
-                медиков. Курс построен на практике с инструкторами, которые каждый день работают
-                с реальными вызовами.
-            </p>
-            <div class="hero-actions">
-                <button type="button" class="btn btn-register hero-register">Оставить заявку на базовый курс</button>
-                <a class="hero-secondary" href="#pricing">Сравнить тарифы</a>
+            <div class="hero-copy">
+                <span class="hero-badge">Очный курс · 21 ноября 2026</span>
+                <h1>Первая помощь за один день: практика в Москве</h1>
+                <p class="hero-text">
+                    Отработайте с инструктором действия до приезда скорой:
+                </p>
+                <ul class="hero-outcomes">
+                    <li>Сердечно-лёгочная реанимация на манекене</li>
+                    <li>Остановка кровотечения и наложение повязок</li>
+                    <li>Помощь при травмах и ожогах</li>
+                </ul>
+                <p class="hero-price">Базовый курс — 4 900 ₽</p>
+                <div class="hero-actions">
+                    <button type="button" class="btn btn-register hero-register">Оставить заявку без оплаты</button>
+                    <a class="hero-secondary" href="#pricing">Сравнить тарифы</a>
+                </div>
             </div>
-            <p class="hero-price">4 900 ₽ · очный курс 10:00–18:00 · заявка без оплаты</p>
+            <figure class="hero-visual">
+                <img src="images/cpr-training.jpg" alt="Практика сердечно-лёгочной реанимации на манекене" width="1600" height="1067" fetchpriority="high">
+                <figcaption>
+                    <strong>Навыки, которые вы попробуете сами</strong>
+                    Тренировка на манекенах и обратная связь инструктора.
+                </figcaption>
+            </figure>
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
@@ -52,11 +75,6 @@
                     Москва, ул. Примерная, 10, учебный центр «Спаси-Себя»
                 </div>
             </div>
-            <div class="hero-note">
-                На курсе вы отработаете навыки на манекенах и отработаете сценарии, которые
-                помогают сохранить спокойствие и принимать правильные решения под давлением времени.
-                После занятия вы получите сертификат и памятку по алгоритмам первой помощи.
-            </div>
         </div>
     </header>
 
@@ -64,61 +82,66 @@
         <section class="section registration-section" id="registration">
             <div class="container">
                 <div class="registration-panel">
-                    <h2 class="section-title">Записаться на курс</h2>
+                    <h2 class="section-title">Заявка на курс</h2>
                     <p class="section-lead registration-summary" id="registration-summary" aria-live="polite">
                         <strong id="registration-tariff">Базовый — 4 900 ₽</strong>
-                        <span id="registration-inclusions">Полный однодневный курс, сертификат, памятка и кофе-брейки.</span>
-                        <span>21 ноября · 10:00–18:00. Заявка без оплаты.</span>
-                        <span>Оставьте имя и телефон. Мы позвоним, чтобы подтвердить тариф и место на курсе.</span>
+                        <span id="registration-inclusions">Полный курс, сертификат, памятка и кофе-брейки.</span>
+                        <span>21 ноября · 10:00–18:00 · Москва</span>
+                        <span id="registration-terms" hidden></span>
                     </p>
-                    <details class="tariff-comparison">
-                        <summary>Сравнить три тарифа</summary>
-                        <ul>
-                            <li><strong>Базовый — 4 900 ₽.</strong> Полный однодневный курс, сертификат, памятка и кофе-брейки.</li>
-                            <li><strong>Расширенный — 7 900 ₽.</strong> Всё из базового, перевязочные материалы и дополнительная практика. Время дополнительного блока уточним при подтверждении заявки.</li>
-                            <li><strong>Корпоративный — 12 900 ₽.</strong> Разбор профессиональных рисков, консультация для руководителя и отчёт для работодателя. Расчёт участия для человека или группы уточним при подтверждении заявки.</li>
-                        </ul>
-                        <a class="registration-pricing-link" href="#pricing">Перейти к выбору тарифа</a>
-                    </details>
-                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
+                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post" aria-describedby="registration-help">
                         <label>
                             Имя
                             <input type="text" name="name" required autocomplete="name">
                         </label>
                         <label>
-                            Телефон для подтверждения участия
+                            Телефон
                             <input type="tel" name="phone" required autocomplete="tel">
                         </label>
-                        <button type="submit" class="btn">Отправить заявку</button>
+                        <button type="submit" class="btn">Оставить заявку без оплаты</button>
                     </form>
+                    <p class="registration-help" id="registration-help">Мы позвоним, чтобы подтвердить тариф и место на курсе.</p>
                     <p class="form-message" id="form-message" aria-live="polite"></p>
+                    <details class="tariff-comparison">
+                        <summary>Сравнить три тарифа</summary>
+                        <ul>
+                            <li><strong>Базовый — 4 900 ₽.</strong> Полный курс, сертификат, памятка и кофе-брейки.</li>
+                            <li><strong>Расширенный — 7 900 ₽.</strong> Всё из базового, перевязочные материалы и дополнительная практика. Время дополнительного блока уточним при подтверждении заявки.</li>
+                            <li><strong>Корпоративный — 12 900 ₽.</strong> Разбор профессиональных рисков, консультация для руководителя и отчёт для работодателя. Расчёт участия для человека или группы уточним при подтверждении заявки.</li>
+                        </ul>
+                        <a class="registration-pricing-link" href="#pricing">Перейти к выбору тарифа</a>
+                    </details>
+                    <ul class="registration-facts" aria-label="Формат обучения">
+                        <li>До 14 человек в группе</li>
+                        <li>Практика с инструктором</li>
+                        <li>Именной сертификат</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <h2 class="section-title">О курсе</h2>
+                <h2 class="section-title">Как проходит обучение</h2>
                 <p class="section-lead">
-                    Это не лекция «для галочки», а полноценный практический день, где каждый блок
-                    заканчивается отработкой навыков под контролем инструктора.
+                    Сначала инструктор показывает приём, затем вы тренируетесь и получаете обратную связь.
                 </p>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <h3>Однодневный курс</h3>
-                        <p>Больше половины времени посвящено тренировкам на манекенах, имитации травм и работе в парах.</p>
+                        <h3>Больше половины дня — практика</h3>
+                        <p>Манекены, имитаторы травм и работа в парах.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>Формат offline</h3>
-                        <p>Живое общение, мгновенная обратная связь и возможность задать вопросы по вашим реальным ситуациям.</p>
+                        <h3>Очный формат</h3>
+                        <p>Личные вопросы инструктору и разбор ваших ситуаций.</p>
                     </article>
                     <article class="feature-card">
                         <h3>Сертификат</h3>
-                        <p>После курса вы получите именной сертификат и чек-лист действий для дома, работы и поездок.</p>
+                        <p>Именной сертификат и памятка с алгоритмами после курса.</p>
                     </article>
                     <article class="feature-card">
                         <h3>Малые группы</h3>
-                        <p>До 14 человек в группе, чтобы каждый успел отработать все ключевые навыки несколько раз.</p>
+                        <p>До 14 участников: время на отработку навыков для каждого.</p>
                     </article>
                 </div>
             </div>
@@ -126,46 +149,45 @@
 
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Программа курса</h2>
+                <h2 class="section-title">Что вы отработаете за день</h2>
                 <p class="section-lead program-intro">
-                    Каждый модуль включает объяснение, демонстрацию инструктора и вашу практику.
-                    Вот что вы отработаете за день.
+                    Программа с 10:00 до 18:00, с перерывом на обед.
                 </p>
                 <div class="program-list">
                     <article class="program-module">
                         <h3>10:00 – 11:00 · Оценка обстановки и безопасность</h3>
                         <p>
-                            Научитесь оценивать опасность, проверять сознание и дыхание, вызывать скорую. Отработаете последовательность действий на манекене и в паре.
+                            Оценка опасности, проверка сознания и дыхания, вызов скорой.
                         </p>
                     </article>
                     <article class="program-module">
                         <h3>11:00 – 12:30 · Сердечно-легочная реанимация</h3>
                         <p>
-                            Отработаете СЛР взрослому на манекене: компрессии, искусственное дыхание и смену спасателя. Потренируетесь пользоваться учебным автоматическим дефибриллятором.
+                            СЛР взрослому на манекене: компрессии, дыхание и смена спасателя. Работа с учебным дефибриллятором.
                         </p>
                     </article>
                     <article class="program-module">
                         <h3>12:30 – 13:30 · Обед и разбор кейсов</h3>
                         <p>
-                            Перерыв на обед и обсуждение случаев из практики инструкторов. Разберёте вопросы после утренних занятий и действия, которые помогают справиться с растерянностью.
+                            Перерыв и ответы на вопросы после утренней практики.
                         </p>
                     </article>
                     <article class="program-module">
                         <h3>13:30 – 15:00 · Кровотечения и шок</h3>
                         <p>
-                            Потренируетесь накладывать давящую повязку и использовать турникет на имитаторах ран. Разберёте признаки шока и помощь до приезда медиков.
+                            Давящая повязка и турникет на имитаторах ран. Признаки шока и помощь до приезда медиков.
                         </p>
                     </article>
                     <article class="program-module">
                         <h3>15:00 – 16:30 · Переломы, вывихи, ожоги</h3>
                         <p>
-                            Отработаете фиксацию конечности подручными средствами и помощь при ожогах. Узнаете, когда нельзя перемещать пострадавшего и каких ошибок избегать.
+                            Фиксация конечности и помощь при ожогах. Когда нельзя перемещать пострадавшего.
                         </p>
                     </article>
                     <article class="program-module">
                         <h3>16:30 – 18:00 · Итоговая практика и сертификация</h3>
                         <p>
-                            Пройдёте сценарии с несколькими пострадавшими и ограниченным временем. Получите обратную связь инструктора, ответы на вопросы и сертификат.
+                            Учебные сценарии с несколькими пострадавшими. Обратная связь, ответы на вопросы и сертификат.
                         </p>
                     </article>
                 </div>
@@ -174,10 +196,9 @@
 
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Виды травм и состояний</h2>
+                <h2 class="section-title">В каких ситуациях пригодятся навыки</h2>
                 <p class="section-lead">
-                    На курсе мы разбираем самые частые состояния, с которыми сталкиваются очевидцы
-                    в городе, дома, на работе и в путешествиях.
+                    Дома, на работе и в поездке — помощь до приезда медиков.
                 </p>
                 <div class="injury-grid">
                     <article class="injury-card">
@@ -198,7 +219,7 @@
                     </article>
                     <article class="injury-card">
                         <h3>Остановка дыхания</h3>
-                        <p>СЛР, работа в паре, использование автоматического дефibrиллятора, действия до приезда скорой.</p>
+                        <p>СЛР, работа в паре, использование автоматического дефибриллятора, действия до приезда скорой.</p>
                     </article>
                     <article class="injury-card">
                         <h3>Травмы головы и позвоночника</h3>
@@ -210,38 +231,33 @@
 
         <section class="section legal-section">
             <div class="container">
-                <h2 class="section-title">Юридические аспекты</h2>
+                <h2 class="section-title">Как помогать в пределах своих навыков</h2>
                 <p class="section-lead">
-                    Многие люди боятся помогать из-за страха юридической ответственности. На курсе
-                    мы отдельно разбираем, что говорит закон и как действовать правильно.
+                    Разберём правовые основы первой помощи и взаимодействие с экстренными службами.
                 </p>
                 <div class="legal-block">
-                    <h3>Добросовестный помощник</h3>
+                    <h3>Правовые основы первой помощи</h3>
                     <p>
-                        В России действует принцип добросовестного помощника: если вы помогаете пострадавшему
-                        в разумных пределах своих возможностей и без грубой неосторожности, закон защищает
-                        вас от необоснованных претензий.
+                        Что относится к первой помощи и какие вопросы согласия и ответственности важно учитывать.
                     </p>
                 </div>
                 <div class="legal-block">
                     <h3>Границы ответственности</h3>
                     <p>
-                        Мы разбираем, какие действия считаются разумными, когда нужно дождаться медиков,
-                        и как фиксировать обстоятельства происшествия, если вы оказались свидетелем или участником помощи.
+                        Когда можно помочь самостоятельно, а когда нужно дождаться медиков.
                     </p>
                 </div>
                 <div class="legal-block">
                     <h3>Документирование и вызов служб</h3>
                     <p>
-                        Как правильно передать информацию диспетчеру, что сообщить медикам по прибытии и
-                        какие данные важно сохранить для дальнейшего разбирательства или страхового случая.
+                        Что сообщить диспетчеру и какие сведения передать прибывшим медикам.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="emotional-photo">
-            <img src="images/cpr-training.jpg" alt="Практика сердечно-легочной реанимации на манекене">
+            <img src="images/cpr-training.jpg" alt="Практика сердечно-легочной реанимации на манекене" width="1600" height="1067" loading="lazy" decoding="async">
         </section>
 
         <section class="section">
@@ -287,9 +303,9 @@
 
         <section class="section pricing-section" id="pricing">
             <div class="container">
-                <h2 class="section-title">Тарифы</h2>
+                <h2 class="section-title">Выберите формат участия</h2>
                 <p class="section-lead">
-                    Выберите формат участия. Во все тарифы входят материалы, сертификат и доступ к памятке после курса.
+                    Заявка без оплаты. Тариф и условия участия подтвердим по телефону.
                 </p>
                 <div class="pricing-grid">
                     <article class="pricing-card">
@@ -300,7 +316,7 @@
                             <li>Сертификат и памятка</li>
                             <li>Кофе-брейки</li>
                         </ul>
-                        <button type="button" class="btn btn-register">Записаться</button>
+                        <button type="button" class="btn btn-register">Оставить заявку без оплаты</button>
                     </article>
                     <article class="pricing-card featured">
                         <h3>Расширенный</h3>
@@ -309,9 +325,9 @@
                             <li>Всё из базового тарифа</li>
                             <li>Набор перевязочных материалов</li>
                             <li>Дополнительный практический блок</li>
-                            <li>Время дополнительного блока уточним при подтверждении заявки</li>
                         </ul>
-                        <button type="button" class="btn btn-register">Записаться</button>
+                        <p class="pricing-terms">Время дополнительной практики уточним при подтверждении заявки.</p>
+                        <button type="button" class="btn btn-register">Оставить заявку без оплаты</button>
                     </article>
                     <article class="pricing-card">
                         <h3>Корпоративный</h3>
@@ -320,9 +336,9 @@
                             <li>Индивидуальный разбор рисков профессии</li>
                             <li>Консультация для HR или руководителя</li>
                             <li>Отчёт о прохождении для работодателя</li>
-                            <li>Расчёт участия для человека или группы уточним при подтверждении заявки</li>
                         </ul>
-                        <button type="button" class="btn btn-register">Записаться</button>
+                        <p class="pricing-terms">Расчёт цены за человека или группу уточним при подтверждении заявки.</p>
+                        <button type="button" class="btn btn-register">Оставить заявку без оплаты</button>
                     </article>
                 </div>
             </div>
