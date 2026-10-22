@@ -182,14 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.querySelectorAll('.hero-secondary, .registration-pricing-link').forEach((link) => {
-        link.addEventListener('click', () => track('pricing_link_click'));
-    });
-
-    document.querySelector('.tariff-comparison')?.addEventListener('toggle', (event) => {
-        if (event.currentTarget.open) {
-            trackOnce('tariff_comparison_open');
-        }
+    document.querySelector('.hero-secondary')?.addEventListener('click', () => {
+        track('pricing_link_click');
     });
 
     registerButtons.forEach((button) => {
@@ -208,20 +202,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const inclusions = Array.from(selectedCard.querySelectorAll('.pricing-list li'))
                     .map((item) => item.textContent.trim());
                 registrationSummary.querySelector('#registration-inclusions').textContent = `${inclusions.join('. ')}.`;
-                const terms = registrationSummary.querySelector('#registration-terms');
-                if (terms) {
-                    terms.textContent = selectedCard.querySelector('.pricing-terms')?.textContent?.trim() ?? '';
-                    terms.hidden = !terms.textContent;
-                }
             }
 
             if (!registrationSection) {
                 return;
             }
 
-            document.querySelector('.tariff-comparison')?.removeAttribute('open');
-            const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-            registrationSection.scrollIntoView({ behavior, block: 'start' });
+            registrationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 

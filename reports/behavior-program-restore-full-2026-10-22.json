@@ -1,0 +1,99 @@
+{
+  "version": "98a330d",
+  "previous": {
+    "visits": 201,
+    "events": {
+      "page_view": 201,
+      "page_exit": 201,
+      "cta_click": 199,
+      "form_view": 200,
+      "form_field_view": 200,
+      "form_submit_view": 200,
+      "form_start": 47,
+      "field_input": 47,
+      "form_success": 47,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "tariff_comparison_open": 1,
+      "pricing_link_click": 0,
+      "program_view": 160
+    },
+    "cta_without_input": 152,
+    "cta_and_first_field": 199,
+    "cta_and_submit_view": 199,
+    "cta_details": {
+      "hero": 199
+    },
+    "viewports": {
+      "desktop": 201
+    },
+    "median_seconds": {
+      "input_to_success": 2.712,
+      "cta_to_success": 9.457,
+      "cta_to_exit_nonconverters": 9.775
+    },
+    "field_names": {
+      "name": 47,
+      "phone": 47
+    }
+  },
+  "current": {
+    "visits": 201,
+    "events": {
+      "page_view": 201,
+      "page_exit": 201,
+      "cta_click": 197,
+      "form_view": 200,
+      "form_field_view": 200,
+      "form_submit_view": 200,
+      "form_start": 36,
+      "field_input": 36,
+      "form_success": 36,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "tariff_comparison_open": 1,
+      "pricing_link_click": 0,
+      "program_view": 150
+    },
+    "cta_without_input": 161,
+    "cta_and_first_field": 197,
+    "cta_and_submit_view": 197,
+    "cta_details": {
+      "hero": 197
+    },
+    "viewports": {
+      "desktop": 201
+    },
+    "median_seconds": {
+      "input_to_success": 2.766,
+      "cta_to_success": 9.502,
+      "cta_to_exit_nonconverters": 9.844
+    },
+    "field_names": {
+      "name": 36,
+      "phone": 36
+    }
+  },
+  "server": {
+    "visits_count": 201,
+    "orders_count": 36,
+    "generated_at": "2026-10-22T10:17:09+00:00"
+  },
+  "excluded": [],
+  "overlapping_full_visit_ids": 0,
+  "statistics": {
+    "difference_pp": -5.47,
+    "wilson95_current_pct": [
+      13.23,
+      23.8
+    ],
+    "wilson95_previous_pct": [
+      18.06,
+      29.7
+    ],
+    "fisher_two_sided_p": 0.2177,
+    "historical_best_fisher_p_exploratory": 0.0178
+  }
+}
