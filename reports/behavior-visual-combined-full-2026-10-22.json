@@ -1,0 +1,95 @@
+{
+  "version": "bf593c4",
+  "previous": {
+    "visits": 201,
+    "events": {
+      "page_view": 201,
+      "page_exit": 201,
+      "cta_click": 197,
+      "form_view": 200,
+      "form_field_view": 197,
+      "form_submit_view": 197,
+      "form_start": 52,
+      "field_input": 52,
+      "form_success": 52,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "tariff_comparison_open": 1,
+      "pricing_link_click": 0
+    },
+    "cta_without_input": 145,
+    "cta_details": {
+      "hero": 197
+    },
+    "viewports": {
+      "desktop": 201
+    },
+    "median_seconds": {
+      "input_to_success": 2.665,
+      "cta_to_success": 10.052,
+      "cta_to_exit_nonconverters": 10.628
+    },
+    "field_names": {
+      "name": 52,
+      "phone": 52
+    }
+  },
+  "current": {
+    "visits": 201,
+    "events": {
+      "page_view": 201,
+      "page_exit": 201,
+      "cta_click": 199,
+      "form_view": 200,
+      "form_field_view": 200,
+      "form_submit_view": 200,
+      "form_start": 47,
+      "field_input": 47,
+      "form_success": 47,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "tariff_comparison_open": 1,
+      "pricing_link_click": 0
+    },
+    "cta_without_input": 152,
+    "cta_details": {
+      "hero": 199
+    },
+    "viewports": {
+      "desktop": 201
+    },
+    "median_seconds": {
+      "input_to_success": 2.712,
+      "cta_to_success": 9.457,
+      "cta_to_exit_nonconverters": 9.775
+    },
+    "field_names": {
+      "name": 47,
+      "phone": 47
+    }
+  },
+  "excluded": [
+    {
+      "visitId": "02a8c4cb-aa8d-45f0-a1b1-0a710b2ab47a",
+      "events": {
+        "section_enter": 6
+      },
+      "converted": false
+    }
+  ],
+  "overlapping_full_visit_ids": 0,
+  "statistics": {
+    "difference_pp": -2.49,
+    "wilson95_current_pct": [
+      18.06,
+      29.7
+    ],
+    "wilson95_previous_pct": [
+      20.31,
+      32.34
+    ],
+    "fisher_two_sided_p": 0.6435
+  }
+}
