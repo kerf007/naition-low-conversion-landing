@@ -61,6 +61,39 @@
     </header>
 
     <main>
+        <section class="section registration-section" id="registration">
+            <div class="container">
+                <div class="registration-panel">
+                    <h2 class="section-title">Записаться на курс</h2>
+                    <p class="section-lead registration-summary" id="registration-summary" aria-live="polite">
+                        <strong id="registration-tariff">Базовый — 4 900 ₽</strong>
+                        <span id="registration-inclusions">Полный однодневный курс, сертификат, памятка и кофе-брейки.</span>
+                        <span>21 ноября · 10:00–18:00. Заявка без оплаты — тариф и место подтвердим по телефону.</span>
+                    </p>
+                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
+                        <label>
+                            Имя
+                            <input type="text" name="name" required autocomplete="name">
+                        </label>
+                        <label>
+                            Телефон
+                            <input type="tel" name="phone" required autocomplete="tel">
+                        </label>
+                        <label>
+                            E-mail
+                            <input type="email" name="email" required autocomplete="email">
+                        </label>
+                        <label>
+                            Для чего вам курс? Достаточно пары слов
+                            <textarea name="purpose" required placeholder="Например: хочу уметь помочь близким"></textarea>
+                        </label>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                    <p class="form-message" id="form-message" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 <h2 class="section-title">О курсе</h2>
@@ -287,39 +320,6 @@
                         </ul>
                         <button type="button" class="btn btn-register">Записаться</button>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section registration-section" id="registration">
-            <div class="container">
-                <div class="registration-panel">
-                    <h2 class="section-title">Записаться на курс</h2>
-                    <p class="section-lead registration-summary" id="registration-summary" aria-live="polite">
-                        <strong id="registration-tariff">Базовый — 4 900 ₽</strong>
-                        <span id="registration-inclusions">Полный однодневный курс, сертификат, памятка и кофе-брейки.</span>
-                        <span>21 ноября · 10:00–18:00. Заявка без оплаты — тариф и место подтвердим по телефону.</span>
-                    </p>
-                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
-                        <label>
-                            Имя
-                            <input type="text" name="name" required autocomplete="name">
-                        </label>
-                        <label>
-                            Телефон
-                            <input type="tel" name="phone" required autocomplete="tel">
-                        </label>
-                        <label>
-                            E-mail
-                            <input type="email" name="email" required autocomplete="email">
-                        </label>
-                        <label>
-                            Для чего вам курс? Достаточно пары слов
-                            <textarea name="purpose" required placeholder="Например: хочу уметь помочь близким"></textarea>
-                        </label>
-                        <button type="submit" class="btn">Отправить заявку</button>
-                    </form>
-                    <p class="form-message" id="form-message" aria-live="polite"></p>
                 </div>
             </div>
         </section>
