@@ -1,0 +1,382 @@
+{
+  "events": [
+    {
+      "event_name": "content_click",
+      "hits": 4,
+      "sessions": 1
+    },
+    {
+      "event_name": "cta_click",
+      "hits": 200,
+      "sessions": 200
+    },
+    {
+      "event_name": "cta_view",
+      "hits": 463,
+      "sessions": 202
+    },
+    {
+      "event_name": "field_focus",
+      "hits": 228,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_input",
+      "hits": 228,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_field_view",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "form_start",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_submit",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_submit_click",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_submit_view",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "form_success",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_view",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "page_exit",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "page_view",
+      "hits": 202,
+      "sessions": 202
+    },
+    {
+      "event_name": "pricing_view",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "program_view",
+      "hits": 164,
+      "sessions": 164
+    },
+    {
+      "event_name": "scroll_checkpoint",
+      "hits": 1008,
+      "sessions": 202
+    },
+    {
+      "event_name": "scroll_depth",
+      "hits": 604,
+      "sessions": 202
+    },
+    {
+      "event_name": "section_enter",
+      "hits": 3796,
+      "sessions": 202
+    }
+  ],
+  "details": [
+    {
+      "event_name": "content_click",
+      "detail": ".program-module",
+      "hits": 4,
+      "sessions": 1
+    },
+    {
+      "event_name": "cta_click",
+      "detail": "hero",
+      "hits": 200,
+      "sessions": 200
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "hero",
+      "hits": 202,
+      "sessions": 202
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "pricing_1",
+      "hits": 92,
+      "sessions": 92
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "pricing_2",
+      "hits": 90,
+      "sessions": 90
+    },
+    {
+      "event_name": "cta_view",
+      "detail": "pricing_3",
+      "hits": 79,
+      "sessions": 79
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "email",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "name",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "phone",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_focus",
+      "detail": "purpose",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_input",
+      "detail": "email",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_input",
+      "detail": "name",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_input",
+      "detail": "phone",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "field_input",
+      "detail": "purpose",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_field_view",
+      "detail": "",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "form_start",
+      "detail": "",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_submit",
+      "detail": "",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_submit_click",
+      "detail": "",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_submit_view",
+      "detail": "",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "form_success",
+      "detail": "",
+      "hits": 57,
+      "sessions": 57
+    },
+    {
+      "event_name": "form_view",
+      "detail": "",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "page_exit",
+      "detail": "30_to_60s",
+      "hits": 168,
+      "sessions": 168
+    },
+    {
+      "event_name": "page_exit",
+      "detail": "over_60s",
+      "hits": 32,
+      "sessions": 32
+    },
+    {
+      "event_name": "page_exit",
+      "detail": "under_10s",
+      "hits": 1,
+      "sessions": 1
+    },
+    {
+      "event_name": "page_view",
+      "detail": "desktop",
+      "hits": 202,
+      "sessions": 202
+    },
+    {
+      "event_name": "pricing_view",
+      "detail": "",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "program_view",
+      "detail": "",
+      "hits": 164,
+      "sessions": 164
+    },
+    {
+      "event_name": "scroll_checkpoint",
+      "detail": "10",
+      "hits": 202,
+      "sessions": 202
+    },
+    {
+      "event_name": "scroll_checkpoint",
+      "detail": "100",
+      "hits": 1,
+      "sessions": 1
+    },
+    {
+      "event_name": "scroll_checkpoint",
+      "detail": "25",
+      "hits": 202,
+      "sessions": 202
+    },
+    {
+      "event_name": "scroll_checkpoint",
+      "detail": "50",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "scroll_checkpoint",
+      "detail": "75",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "scroll_checkpoint",
+      "detail": "90",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "scroll_depth",
+      "detail": "25",
+      "hits": 202,
+      "sessions": 202
+    },
+    {
+      "event_name": "scroll_depth",
+      "detail": "50",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "scroll_depth",
+      "detail": "75",
+      "hits": 201,
+      "sessions": 201
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s1",
+      "hits": 404,
+      "sessions": 202
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s2",
+      "hits": 604,
+      "sessions": 202
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s3",
+      "hits": 474,
+      "sessions": 202
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s4",
+      "hits": 560,
+      "sessions": 202
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s5",
+      "hits": 488,
+      "sessions": 201
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s6",
+      "hits": 402,
+      "sessions": 201
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s7",
+      "hits": 392,
+      "sessions": 201
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s8",
+      "hits": 298,
+      "sessions": 201
+    },
+    {
+      "event_name": "section_enter",
+      "detail": "s9",
+      "hits": 174,
+      "sessions": 173
+    }
+  ],
+  "cohorts": {
+    "sessions": 202,
+    "page_view": 202,
+    "page_and_cta": 200,
+    "cta_and_form_heading": 200,
+    "cta_and_first_field": 200,
+    "cta_and_submit_button": 200,
+    "cta_and_form_start": 57,
+    "started_and_succeeded": 57
+  },
+  "generated_at": "2026-10-22T06:36:59+00:00"
+}
