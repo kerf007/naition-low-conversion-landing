@@ -182,8 +182,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.querySelector('.hero-secondary')?.addEventListener('click', () => {
-        track('pricing_link_click');
+    document.querySelectorAll('.hero-secondary, .registration-pricing-link').forEach((link) => {
+        link.addEventListener('click', () => track('pricing_link_click'));
+    });
+
+    document.querySelector('.tariff-comparison')?.addEventListener('toggle', (event) => {
+        if (event.currentTarget.open) {
+            trackOnce('tariff_comparison_open');
+        }
     });
 
     registerButtons.forEach((button) => {
@@ -208,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            document.querySelector('.tariff-comparison')?.removeAttribute('open');
             registrationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });

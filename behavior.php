@@ -18,6 +18,7 @@ const ALLOWED_EVENTS = [
     'section_enter' => ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11', 's12'],
     'cta_click' => ['hero', 'pricing_1', 'pricing_2', 'pricing_3'],
     'pricing_link_click' => [''],
+    'tariff_comparison_open' => [''],
     'content_click' => ['.meta-card', '.feature-card', '.program-module', '.injury-card', '.legal-block', '.instructor-card', '.pricing-card'],
     'form_start' => [''],
     'field_focus' => ['name', 'phone', 'email', 'purpose'],
@@ -81,8 +82,6 @@ function buildVisits(array $rows): array
     $inputNodes = [
         ['selector' => '#registration-form [name="name"]', 'name' => 'name', 'type' => 'text', 'required' => true],
         ['selector' => '#registration-form [name="phone"]', 'name' => 'phone', 'type' => 'tel', 'required' => true],
-        ['selector' => '#registration-form [name="email"]', 'name' => 'email', 'type' => 'email', 'required' => false],
-        ['selector' => '#registration-form [name="purpose"]', 'name' => 'purpose', 'type' => 'textarea', 'required' => false],
     ];
 
     foreach ($rows as $row) {

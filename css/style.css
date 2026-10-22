@@ -118,7 +118,9 @@ img {
 }
 
 .btn:focus-visible,
-.hero-secondary:focus-visible {
+.hero-secondary:focus-visible,
+.tariff-comparison summary:focus-visible,
+.registration-pricing-link:focus-visible {
     outline: 3px solid #225a4a;
     outline-offset: 3px;
 }
@@ -372,6 +374,28 @@ img {
     display: block;
 }
 
+.tariff-comparison {
+    margin-bottom: 20px;
+}
+
+.tariff-comparison summary,
+.registration-pricing-link {
+    color: #225a4a;
+    font-weight: 600;
+}
+
+.tariff-comparison summary {
+    cursor: pointer;
+}
+
+.tariff-comparison ul {
+    padding-left: 20px;
+}
+
+.tariff-comparison li + li {
+    margin-top: 12px;
+}
+
 .form-grid {
     display: grid;
     gap: 18px;
@@ -384,19 +408,13 @@ img {
     color: var(--heading);
 }
 
-.form-grid input,
-.form-grid textarea {
+.form-grid input {
     width: 100%;
     padding: 14px 16px;
     border: 1px solid #d8d2cb;
     border-radius: 12px;
     font: inherit;
     background: #fff;
-}
-
-.form-grid textarea {
-    min-height: 140px;
-    resize: vertical;
 }
 
 .form-message {
@@ -466,17 +484,11 @@ img {
         gap: 4px;
     }
 
-    .registration-panel .form-grid label:nth-child(n + 3),
     .registration-panel .form-grid button {
         grid-column: 1 / -1;
     }
 
-    .registration-panel .form-grid input,
-    .registration-panel .form-grid textarea {
+    .registration-panel .form-grid input {
         padding: 10px 14px;
-    }
-
-    .registration-panel .form-grid textarea {
-        min-height: 76px;
     }
 }

@@ -68,24 +68,26 @@
                     <p class="section-lead registration-summary" id="registration-summary" aria-live="polite">
                         <strong id="registration-tariff">Базовый — 4 900 ₽</strong>
                         <span id="registration-inclusions">Полный однодневный курс, сертификат, памятка и кофе-брейки.</span>
-                        <span>21 ноября · 10:00–18:00. Заявка без оплаты — тариф и место подтвердим по телефону.</span>
+                        <span>21 ноября · 10:00–18:00. Заявка без оплаты.</span>
+                        <span>Оставьте имя и телефон. Мы позвоним, чтобы подтвердить тариф и место на курсе.</span>
                     </p>
+                    <details class="tariff-comparison">
+                        <summary>Сравнить три тарифа</summary>
+                        <ul>
+                            <li><strong>Базовый — 4 900 ₽.</strong> Полный однодневный курс, сертификат, памятка и кофе-брейки.</li>
+                            <li><strong>Расширенный — 7 900 ₽.</strong> Всё из базового, перевязочные материалы и дополнительная практика. Время дополнительного блока уточним при подтверждении заявки.</li>
+                            <li><strong>Корпоративный — 12 900 ₽.</strong> Разбор профессиональных рисков, консультация для руководителя и отчёт для работодателя. Расчёт участия для человека или группы уточним при подтверждении заявки.</li>
+                        </ul>
+                        <a class="registration-pricing-link" href="#pricing">Перейти к выбору тарифа</a>
+                    </details>
                     <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
                         <label>
                             Имя
                             <input type="text" name="name" required autocomplete="name">
                         </label>
                         <label>
-                            Телефон
+                            Телефон для подтверждения участия
                             <input type="tel" name="phone" required autocomplete="tel">
-                        </label>
-                        <label>
-                            E-mail (необязательно)
-                            <input type="email" name="email" autocomplete="email">
-                        </label>
-                        <label>
-                            Для чего вам курс? (необязательно)
-                            <textarea name="purpose" placeholder="Например: хочу уметь помочь близким"></textarea>
                         </label>
                         <button type="submit" class="btn">Отправить заявку</button>
                     </form>
@@ -103,7 +105,7 @@
                 </p>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <h3>8 часов практики</h3>
+                        <h3>Однодневный курс</h3>
                         <p>Больше половины времени посвящено тренировкам на манекенах, имитации травм и работе в парах.</p>
                     </article>
                     <article class="feature-card">
@@ -307,6 +309,7 @@
                             <li>Всё из базового тарифа</li>
                             <li>Набор перевязочных материалов</li>
                             <li>Дополнительный практический блок</li>
+                            <li>Время дополнительного блока уточним при подтверждении заявки</li>
                         </ul>
                         <button type="button" class="btn btn-register">Записаться</button>
                     </article>
@@ -317,6 +320,7 @@
                             <li>Индивидуальный разбор рисков профессии</li>
                             <li>Консультация для HR или руководителя</li>
                             <li>Отчёт о прохождении для работодателя</li>
+                            <li>Расчёт участия для человека или группы уточним при подтверждении заявки</li>
                         </ul>
                         <button type="button" class="btn btn-register">Записаться</button>
                     </article>
