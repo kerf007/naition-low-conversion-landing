@@ -198,7 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const tariffName = selectedCard?.querySelector('h3')?.textContent?.trim();
             const tariffPrice = selectedCard?.querySelector('.price')?.textContent?.trim();
             if (registrationSummary && tariffName && tariffPrice) {
-                registrationSummary.textContent = `21 ноября · ${tariffName} — ${tariffPrice}. Заявка без оплаты; тариф и место подтвердим по телефону.`;
+                registrationSummary.querySelector('#registration-tariff').textContent = `${tariffName} — ${tariffPrice}`;
+                const inclusions = Array.from(selectedCard.querySelectorAll('.pricing-list li'))
+                    .map((item) => item.textContent.trim());
+                registrationSummary.querySelector('#registration-inclusions').textContent = `${inclusions.join('. ')}.`;
             }
 
             if (!registrationSection) {
