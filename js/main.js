@@ -216,7 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             diagnostics?.scrollRequested();
-            registrationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // 'auto' would inherit the page's CSS smooth scrolling.
+            registrationSection.scrollIntoView({ behavior: 'instant', block: 'start' });
         });
     });
 

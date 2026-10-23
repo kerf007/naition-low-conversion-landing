@@ -76,8 +76,11 @@ try {
         $keys = ['session_id', 'tracker_version', 'ui_version', 'experiment_id', 'events'];
         if (!is_array($data) || array_diff(array_keys($data), $keys) || array_diff($keys, array_keys($data))
             || !is_string($data['session_id']) || preg_match('/^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/', $data['session_id']) !== 1
-            || $data['tracker_version'] !== 'preinput-v1' || $data['ui_version'] !== '3858c95'
-            || $data['experiment_id'] !== 'price3900-diagnostics'
+            || $data['tracker_version'] !== 'preinput-v1'
+            || !in_array([$data['ui_version'], $data['experiment_id']], [
+                ['3858c95', 'price3900-diagnostics'],
+                ['3858c95-instant', 'price3900-instant-scroll'],
+            ], true)
             || !is_array($data['events']) || !array_is_list($data['events'])
             || count($data['events']) < 1 || count($data['events']) > 8) reply(400, ['ok'=>false, 'error'=>'Invalid batch']);
         foreach ($data['events'] as $item) {
