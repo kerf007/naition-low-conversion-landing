@@ -53,7 +53,7 @@ function render() {
 function numberP(p) { return p.toFixed(3).replace('.', ','); }
 
 function renderChart() {
-  const left=44, top=24, height=190, step=86, maximum=.45;
+  const left=44, right=1100, top=24, height=190, step=(right-left)/data.runs.length, maximum=.45;
   const y = value => top + height * (1-value/maximum);
   let svg = '<title>Серверная конверсия по экспериментам с 95% интервалами Уилсона</title>';
   for(let tick=0;tick<=.4;tick+=.1){svg+=`<line class="chart-grid" x1="${left}" y1="${y(tick)}" x2="1100" y2="${y(tick)}"/><text class="axis-text" x="${left-9}" y="${y(tick)+4}" text-anchor="end">${Math.round(tick*100)}%</text>`;}

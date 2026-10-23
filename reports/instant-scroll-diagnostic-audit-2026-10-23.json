@@ -1,0 +1,310 @@
+{
+  "no_input": {
+    "n": 70,
+    "wheel_after_cta": 70,
+    "touch_after_cta": 0,
+    "limited": 0,
+    "end_missing": 0,
+    "first_name_available_before_exit": 70,
+    "last_settled_name_available": 66,
+    "exit_name_half_visible": 66,
+    "last_settled_nodes_half_visible": {
+      "summary": 50,
+      "name": 66,
+      "phone": 66,
+      "email": 70,
+      "purpose": 70,
+      "submit": 64
+    },
+    "exit_nodes_half_visible": {
+      "summary": 50,
+      "name": 66,
+      "phone": 66,
+      "email": 70,
+      "purpose": 70,
+      "submit": 64
+    },
+    "median_cta_to_first_arrival": 0.407
+  },
+  "success": {
+    "n": 30,
+    "wheel_after_cta": 30,
+    "touch_after_cta": 0,
+    "limited": 0,
+    "end_missing": 0,
+    "first_name_available_before_exit": 30,
+    "last_settled_name_available": 30,
+    "exit_name_half_visible": 30,
+    "last_settled_nodes_half_visible": {
+      "summary": 30,
+      "name": 30,
+      "phone": 30,
+      "email": 30,
+      "purpose": 30,
+      "submit": 30
+    },
+    "exit_nodes_half_visible": {
+      "summary": 30,
+      "name": 30,
+      "phone": 30,
+      "email": 30,
+      "purpose": 30,
+      "submit": 30
+    },
+    "median_cta_to_first_arrival": 0.408
+  },
+  "outside_at_exit": [
+    {
+      "visitId": "3669f794-b7ba-4522-9b90-d18826b1d0be",
+      "last_settled_name": {
+        "key": "name",
+        "x": 288,
+        "y": -29,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 383,
+        "hits": 5,
+        "samples": 5,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "exit_name": {
+        "key": "name",
+        "x": 288,
+        "y": -29,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 383,
+        "hits": 5,
+        "samples": 5,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "last_snapshots": [
+        {
+          "t": 37462,
+          "reason": "cta",
+          "y": 191
+        },
+        {
+          "t": 37867,
+          "reason": "settled",
+          "y": 1064
+        },
+        {
+          "t": 44318,
+          "reason": "settled",
+          "y": 1152
+        },
+        {
+          "t": 46167,
+          "reason": "settled",
+          "y": 1400
+        },
+        {
+          "t": 47948,
+          "reason": "exit",
+          "y": 1400
+        }
+      ]
+    },
+    {
+      "visitId": "732879f8-dbcd-4570-9ee5-c6c21bf630b3",
+      "last_settled_name": {
+        "key": "name",
+        "x": 288,
+        "y": -55,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 0,
+        "hits": 0,
+        "samples": 0,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "exit_name": {
+        "key": "name",
+        "x": 288,
+        "y": -55,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 0,
+        "hits": 0,
+        "samples": 0,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "last_snapshots": [
+        {
+          "t": 48886,
+          "reason": "cta",
+          "y": 191
+        },
+        {
+          "t": 49295,
+          "reason": "settled",
+          "y": 1064
+        },
+        {
+          "t": 55645,
+          "reason": "settled",
+          "y": 1152
+        },
+        {
+          "t": 57810,
+          "reason": "settled",
+          "y": 1426
+        },
+        {
+          "t": 60116,
+          "reason": "exit",
+          "y": 1426
+        }
+      ]
+    },
+    {
+      "visitId": "737259a0-27da-4740-8813-c4b41fe17169",
+      "last_settled_name": {
+        "key": "name",
+        "x": 288,
+        "y": -54,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 0,
+        "hits": 0,
+        "samples": 0,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "exit_name": {
+        "key": "name",
+        "x": 288,
+        "y": -54,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 0,
+        "hits": 0,
+        "samples": 0,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "last_snapshots": [
+        {
+          "t": 43020,
+          "reason": "cta",
+          "y": 191
+        },
+        {
+          "t": 43428,
+          "reason": "settled",
+          "y": 1064
+        },
+        {
+          "t": 49846,
+          "reason": "settled",
+          "y": 1152
+        },
+        {
+          "t": 51729,
+          "reason": "settled",
+          "y": 1425
+        },
+        {
+          "t": 53625,
+          "reason": "exit",
+          "y": 1425
+        }
+      ]
+    },
+    {
+      "visitId": "ded45188-c3de-434d-aade-b77af00eb136",
+      "last_settled_name": {
+        "key": "name",
+        "x": 288,
+        "y": -52,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 0,
+        "hits": 0,
+        "samples": 0,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "exit_name": {
+        "key": "name",
+        "x": 288,
+        "y": -52,
+        "w": 346,
+        "h": 48,
+        "visible_permille": 0,
+        "hits": 0,
+        "samples": 0,
+        "styled_visible": true,
+        "enabled": true,
+        "readonly": false,
+        "focusable": true,
+        "pointer_events": true
+      },
+      "last_snapshots": [
+        {
+          "t": 38598,
+          "reason": "cta",
+          "y": 191
+        },
+        {
+          "t": 39007,
+          "reason": "settled",
+          "y": 1064
+        },
+        {
+          "t": 45357,
+          "reason": "settled",
+          "y": 1152
+        },
+        {
+          "t": 47009,
+          "reason": "settled",
+          "y": 1423
+        },
+        {
+          "t": 49031,
+          "reason": "exit",
+          "y": 1423
+        }
+      ]
+    }
+  ],
+  "no_cta": [
+    {
+      "visitId": "05779b4c-e000-48fd-b057-8cb70e3d86d6",
+      "events": 21,
+      "ended": false
+    },
+    {
+      "visitId": "f599e996-0b04-4416-af9b-365f753017f8",
+      "events": 15,
+      "ended": true
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "textEqual": true,
+      "before": {
+        "programHeight": 1105,
+        "pageHeight": 7731,
+        "formY": 1341.046875,
+        "formHeight": 342,
+        "overflow": false,
+        "columns": "1120px",
+        "font": "16px",
+        "padding": "28px"
+      },
+      "after": {
+        "programHeight": 787,
+        "pageHeight": 7413,
+        "formY": 1341.046875,
+        "formHeight": 342,
+        "overflow": false,
+        "columns": "1120px",
+        "font": "16px",
+        "padding": "16px 24px"
+      }
+    },
+    {
+      "width": 768,
+      "textEqual": true,
+      "before": {
+        "programHeight": 1105,
+        "pageHeight": 8862,
+        "formY": 1292.125,
+        "formHeight": 342,
+        "overflow": false,
+        "columns": "728px",
+        "font": "16px",
+        "padding": "28px"
+      },
+      "after": {
+        "programHeight": 787,
+        "pageHeight": 8544,
+        "formY": 1292.125,
+        "formHeight": 342,
+        "overflow": false,
+        "columns": "728px",
+        "font": "16px",
+        "padding": "16px 24px"
+      }
+    },
+    {
+      "width": 390,
+      "textEqual": true,
+      "before": {
+        "programHeight": 1796,
+        "pageHeight": 12952,
+        "formY": 1933.046875,
+        "formHeight": 585,
+        "overflow": false,
+        "columns": "350px",
+        "font": "16px",
+        "padding": "28px"
+      },
+      "after": {
+        "programHeight": 1796,
+        "pageHeight": 12952,
+        "formY": 1933.046875,
+        "formHeight": 585,
+        "overflow": false,
+        "columns": "350px",
+        "font": "16px",
+        "padding": "28px"
+      }
+    }
+  ],
+  "diagnostics": {
+    "status": 200,
+    "ui": "program-spacing-v1",
+    "experiment": "price3900-program-spacing",
+    "body": {
+      "ok": true
+    }
+  }
+}
