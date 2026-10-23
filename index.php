@@ -7,6 +7,7 @@
     <title>Первая помощь: практический курс для каждого</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="api/visit.php" defer></script>
+    <script src="js/form-diagnostics.js" defer></script>
     <script src="js/main.js" defer></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">

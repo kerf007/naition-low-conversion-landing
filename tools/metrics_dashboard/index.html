@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Эксперименты · Первая помощь</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23296958'/%3E%3Cpath d='M9 27V20M20 27V12M31 27V6' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">↗</span> Первая помощь <span class="divider">/</span> Эксперименты</div><span class="local-badge"><i></i> Локальная панель</span></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">ЛАБОРАТОРИЯ КОНВЕРСИИ</p><h1>От визита к заявке</h1><p class="subtitle">История изменений и поведение посетителей учебного лендинга.</p></div><div class="actions"><button id="refresh" class="button">Обновить из файлов</button><button id="export" class="button dark" disabled>Скачать JSON ↓</button></div></section>
+    <p id="status" role="status" class="status">Загружаем сохранённые результаты…</p>
+    <div id="dashboard" hidden>
+      <section class="selection" aria-label="Выбор прогонов"><label>Изучаемый прогон<select id="run-select"></select></label><span class="versus" aria-hidden="true">↔</span><label>Сравнить с<select id="control-select"></select></label><div class="snapshot-note"><strong>Сохранённые прогоны</strong><span>Без обращения к сайту и симулятору</span></div></section>
+      <section id="metrics" class="metrics" aria-label="Основные показатели"></section>
+      <section class="panel history-panel"><div class="panel-heading"><div><p class="eyebrow">ВСЕ ЭКСПЕРИМЕНТЫ</p><h2>Как менялась конверсия</h2></div><div class="legend"><span><i class="swatch current"></i>Выбранный</span><span><i class="swatch control"></i>Контроль</span><span>↕ 95% интервал</span></div></div><div class="chart-scroll" tabindex="0" aria-label="График конверсии, прокручивается по горизонтали"><svg id="history-chart" viewBox="0 0 1120 280" role="img" aria-label="История серверной конверсии"></svg></div><div id="run-chips" class="run-chips" aria-label="Выбрать эксперимент"></div><p class="footnote">Порядок — по ходу экспериментов. Линии показывают интервал Уилсона; размер выборки у прогонов различается.</p></section>
+      <div class="detail-grid">
+        <section class="panel"><div class="panel-heading"><div><p class="eyebrow">ПОВЕДЕНИЕ</p><h2>Где теряются заявки</h2></div><span class="small-label">Клиентский трекер</span></div><div id="funnel"></div><p id="funnel-note" class="footnote"></p></section>
+        <section class="panel"><div class="panel-heading"><div><p class="eyebrow">СРАВНЕНИЕ</p><h2>Что говорит результат</h2></div></div><div id="comparison"></div><div class="change-card"><span class="small-label">Что меняли</span><p id="change"></p><div id="run-meta" class="tags"></div></div></section>
+      </div>
+      <section class="panel"><div class="panel-heading"><div><p class="eyebrow">НОВАЯ АНАЛИТИКА</p><h2>Что происходит перед вводом</h2></div><label>Диагностический экспорт <select id="diagnostic-select" hidden></select></label></div><div id="diagnostic-content"><p class="notice">Загружаем диагностические экспорты…</p></div><p class="footnote">Это отдельные экспорты новой версии трекера. Категории описывают наблюдения, а не мотив отказа. Доступность в снимке не доказывает доступность весь визит.</p></section>
+      <section class="panel"><div class="panel-heading"><div><p class="eyebrow">ПРОВЕРКА ИСТОЧНИКОВ</p><h2>Сервер и трекер</h2></div></div><div id="quality" class="quality-grid"></div><div id="quality-notes"></div></section>
+      <section class="panel"><div class="panel-heading"><div><p class="eyebrow">ЖУРНАЛ</p><h2>Все результаты</h2></div><label class="search-label"><span class="sr-only">Поиск по экспериментам</span><input id="search" type="search" placeholder="Название или коммит…"></label></div><div class="table-scroll"><table><caption class="sr-only">Серверные результаты экспериментов. Кнопка с названием выбирает прогон.</caption><thead><tr><th>Эксперимент</th><th>Дата</th><th>Цена</th><th class="num">Визиты</th><th class="num">Заявки</th><th class="num">Конверсия</th><th>95% интервал</th></tr></thead><tbody id="run-table"></tbody></table></div><p id="table-empty" hidden>Подходящих экспериментов нет.</p></section>
+      <footer><p>Общая конверсия — заявки / визиты по серверу. Воронка — только наблюдаемые клиентские визиты.</p><p>Прогоны последовательные, без случайного A/B-разделения. Статистика предполагает независимость визитов и не доказывает причину изменения.</p><p id="updated" class="small-label"></p></footer>
+    </div>
+  </main>
+</body>
+</html>

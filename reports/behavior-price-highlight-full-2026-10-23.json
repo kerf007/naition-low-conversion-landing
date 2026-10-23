@@ -1,0 +1,47 @@
+{
+  "version": "3858c95",
+  "server": {
+    "visits_count": 501,
+    "orders_count": 137,
+    "generated_at": "2026-10-23T08:35:41+00:00"
+  },
+  "current": {
+    "visits": 501,
+    "events": {
+      "page_view": 501,
+      "page_exit": 501,
+      "cta_click": 500,
+      "form_view": 500,
+      "form_field_view": 500,
+      "form_submit_view": 500,
+      "form_start": 137,
+      "field_input": 137,
+      "form_success": 137,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 398
+    },
+    "cta_without_input": 363,
+    "cta_and_first_field": 500,
+    "cta_and_submit_view": 500,
+    "cta_details": {
+      "hero": 500
+    },
+    "viewports": {
+      "desktop": 501
+    },
+    "median_seconds": {
+      "input_to_success": 7.328,
+      "cta_to_success": 14.82
+    },
+    "field_names": {
+      "name": 137,
+      "phone": 137,
+      "email": 137,
+      "purpose": 137
+    }
+  },
+  "excluded": []
+}

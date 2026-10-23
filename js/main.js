@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let exitTracked = false;
     let maxScrollY = Math.max(0, Math.round(window.scrollY));
     let activeSection = '';
+    let diagnostics = null;
+    try {
+        diagnostics = window.createFormDiagnostics?.(sessionId) ?? null;
+    } catch (_) {
+        // Optional diagnostics must never block the registration flow.
+    }
 
     const track = (event, detail = '') => {
         if (!sessionId) {
@@ -192,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pricingIndex = pricingCard
                 ? Array.from(document.querySelectorAll('.pricing-card')).indexOf(pricingCard) + 1
                 : 0;
+            diagnostics?.cta(pricingIndex ? `pricing_${pricingIndex}` : 'hero');
             track('cta_click', pricingIndex ? `pricing_${pricingIndex}` : 'hero');
 
             const selectedCard = pricingCard ?? document.querySelector('.pricing-card');
@@ -208,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            diagnostics?.scrollRequested();
             registrationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
@@ -282,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             track('form_success');
+            diagnostics?.success();
             formSucceeded = true;
             form.reset();
         } catch (error) {
