@@ -441,23 +441,6 @@ img {
 }
 
 @media (min-width: 721px) {
-    /* Experiment: reduce program spacing without changing its content. */
-    .program-list {
-        gap: 12px;
-    }
-
-    .program-module {
-        padding: 16px 24px;
-    }
-
-    .program-module h3 {
-        margin-bottom: 8px;
-    }
-
-    .program-module p {
-        margin: 0;
-    }
-
     .registration-section {
         padding: 48px 0;
     }

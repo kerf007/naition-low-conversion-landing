@@ -1,0 +1,90 @@
+{
+  "version": "33a1d49",
+  "server": {
+    "visits_count": 103,
+    "orders_count": 22,
+    "generated_at": "2026-10-23T10:23:52+00:00"
+  },
+  "current": {
+    "visits": 103,
+    "events": {
+      "page_view": 103,
+      "page_exit": 102,
+      "cta_click": 100,
+      "form_view": 101,
+      "form_field_view": 101,
+      "form_submit_view": 101,
+      "form_start": 22,
+      "field_input": 22,
+      "form_success": 22,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 79
+    },
+    "cta_without_input": 78,
+    "cta_and_first_field": 100,
+    "cta_and_submit_view": 100,
+    "cta_details": {
+      "hero": 100
+    },
+    "viewports": {
+      "desktop": 103
+    },
+    "median_seconds": {
+      "input_to_success": 7.215,
+      "cta_to_success": 14.444
+    },
+    "field_names": {
+      "name": 22,
+      "purpose": 22,
+      "phone": 22,
+      "email": 22
+    }
+  },
+  "excluded": [
+    {
+      "visitId": "05779b4c-e000-48fd-b057-8cb70e3d86d6",
+      "reason": "No page_view in this export; diagnostics identify previous UI version"
+    }
+  ],
+  "diagnostics": {
+    "visits": 103,
+    "counts": {
+      "attempts": 100,
+      "scroll_requested": 100,
+      "form_arrival": 100,
+      "focus": 22,
+      "input": 22,
+      "success": 22,
+      "pointer_attempt": 22,
+      "returned": 100,
+      "snapshot_obstacle": 10,
+      "available_without_attempt": 68,
+      "success_branch": 22
+    },
+    "obstacles": {
+      "outside_view": 10
+    },
+    "sequence_gaps": 0,
+    "median_seconds": {
+      "return_to_focus": 0.497,
+      "return_to_exit": 2.232
+    },
+    "versions": [
+      "preinput-v1"
+    ],
+    "ui_versions": [
+      "program-spacing-v1"
+    ]
+  },
+  "comparison": {
+    "control": "a56d22d",
+    "fisher_p": 0.2020374042330343,
+    "wilson95": [
+      0.14549744857392594,
+      0.30228246147937626
+    ]
+  }
+}

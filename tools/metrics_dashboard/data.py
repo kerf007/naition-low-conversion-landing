@@ -22,6 +22,7 @@ RUNS = [
     ("repeat", "Повтор лучшей версии", "Контроль", "ccd6ce0", "2026-10-22", 201, 59, 4900, "4 обязательных", "Точный повтор конфигурации 868fd58: прежние тексты, оформление и четыре поля.", "behavior-best-repeat-full-2026-10-22.json"),
     ("price", "Цена 3 900 ₽", "Цена", "3858c95", "2026-10-23", 501, 137, 3900, "4 обязательных", "Снижение базовой цены с 4 900 до 3 900 ₽ и выделение базовой карточки вместо расширенной.", "behavior-price-highlight-full-2026-10-23.json"),
     ("instant", "Мгновенный переход к форме", "Прокрутка", "a56d22d", "2026-10-23", 102, 30, 3900, "4 обязательных", "Мгновенный переход CTA к форме и новая диагностика до ввода.", "behavior-instant-scroll-full-2026-10-23.json"),
+    ("spacing", "Компактная программа", "Отступы", "33a1d49", "2026-10-23", 103, 22, 3900, "4 обязательных", "Уменьшены отступы программы на десктопе при неизменном тексте. Старая вкладка отделена по версии диагностики.", "behavior-program-spacing-full-2026-10-23.json"),
 ]
 
 
@@ -116,7 +117,7 @@ def build_data():
                 delta=delta, interval=[low, high],
                 p=fisher(current["orders"], current["visits"], control["orders"], control["visits"]))
     return {"generated_at": datetime.now(timezone.utc).isoformat(),
-            "default_run": "instant", "default_control": "price", "runs": runs, "comparisons": comparisons}
+            "default_run": "spacing", "default_control": "instant", "runs": runs, "comparisons": comparisons}
 
 
 if __name__ == "__main__":

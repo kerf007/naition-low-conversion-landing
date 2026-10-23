@@ -81,6 +81,7 @@ try {
                 ['3858c95', 'price3900-diagnostics'],
                 ['3858c95-instant', 'price3900-instant-scroll'],
                 ['program-spacing-v1', 'price3900-program-spacing'],
+                ['program-copy-v1', 'price3900-program-copy'],
             ], true)
             || !is_array($data['events']) || !array_is_list($data['events'])
             || count($data['events']) < 1 || count($data['events']) > 8) reply(400, ['ok'=>false, 'error'=>'Invalid batch']);

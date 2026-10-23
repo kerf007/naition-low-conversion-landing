@@ -81,6 +81,21 @@ def summarize(export):
             "ui_versions":sorted({v.get('uiVersion','unknown') for v in visits})}
 
 
+def version_summaries(export, ident):
+    # Old tabs can send delayed batches after a redeploy resets the database.
+    groups = {}
+    for visit in export['visits']:
+        key = (visit.get('trackerVersion', 'unknown'),
+               visit.get('uiVersion', 'unknown'), visit.get('experimentId', 'unknown'))
+        groups.setdefault(key, []).append(visit)
+    result = []
+    for (tracker, ui, experiment), visits in sorted(groups.items()):
+        label = ident if len(groups) == 1 else f'{ident} / {ui} / {experiment} / {tracker}'
+        result.append({'id': label, 'captured_at': export.get('generated_at'),
+                       'experiment_id': experiment, **summarize({'visits': visits})})
+    return result
+
+
 def saved_diagnostics():
     result = []
     root = ROOT / 'data'
@@ -90,7 +105,7 @@ def saved_diagnostics():
             continue
         try:
             export = json.loads(path.read_text())
-            result.append({"id":folder.name, "captured_at":export.get('generated_at'), **summarize(export)})
+            result.extend(version_summaries(export, folder.name))
         except (OSError, ValueError, KeyError, TypeError):
             result.append({"id":folder.name, "error":"Не удалось прочитать диагностический экспорт"})
     return {"exports":result}

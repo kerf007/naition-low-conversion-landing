@@ -1,6 +1,6 @@
 import copy
 import unittest
-from diagnostics import summarize
+from diagnostics import summarize, version_summaries
 
 
 def event(seq, name, detail='', state=None, flow=1):
@@ -8,6 +8,20 @@ def event(seq, name, detail='', state=None, flow=1):
 
 
 class ClassificationTests(unittest.TestCase):
+    def test_old_tab_does_not_pollute_new_run(self):
+        old = dict(trackerVersion='v1', uiVersion='old', experimentId='control',
+                   events=[event(9, 'exit')])
+        current = dict(trackerVersion='v1', uiVersion='new', experimentId='spacing',
+                       events=[event(1, 'cta'), event(2, 'success'), event(3, 'exit')])
+        rows = version_summaries({'visits': [old, current]}, 'capture')
+        self.assertEqual(len(rows), 2)
+        new = next(row for row in rows if row['experiment_id'] == 'spacing')
+        self.assertEqual(new['visits'], 1)
+        self.assertEqual(new['sequence_gaps'], 0)
+        self.assertEqual(new['counts']['success_branch'], 1)
+        previous = next(row for row in rows if row['experiment_id'] == 'control')
+        self.assertEqual(previous['sequence_gaps'], 1)
+
     def summarize(self, events):
         return summarize({'visits':[{'events':events,'trackerVersion':'preinput-v1'}]})['counts']
 

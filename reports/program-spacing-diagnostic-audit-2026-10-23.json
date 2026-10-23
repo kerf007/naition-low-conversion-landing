@@ -1,0 +1,20 @@
+{
+  "no_input": {
+    "n": 78,
+    "wheel_after_cta": 78,
+    "available_before_exit": 78,
+    "limited": 0,
+    "end_missing": 0
+  },
+  "success": {
+    "n": 22,
+    "wheel_after_cta": 22,
+    "available_before_exit": 22,
+    "limited": 0,
+    "end_missing": 0
+  },
+  "excluded_diagnostic_versions": {
+    "3858c95-instant": 1
+  },
+  "cohort_ids_match": true
+}
