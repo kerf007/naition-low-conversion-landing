@@ -37,7 +37,7 @@
                 <button type="button" class="btn btn-register hero-register">Оставить заявку на базовый курс</button>
                 <a class="hero-secondary" href="#pricing">Сравнить тарифы</a>
             </div>
-            <p class="hero-price">4 900 ₽ · очный курс 10:00–18:00 · заявка без оплаты</p>
+            <p class="hero-price">3 900 ₽ · очный курс 10:00–18:00 · заявка без оплаты</p>
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
@@ -66,7 +66,7 @@
                 <div class="registration-panel">
                     <h2 class="section-title">Записаться на курс</h2>
                     <p class="section-lead registration-summary" id="registration-summary" aria-live="polite">
-                        <strong id="registration-tariff">Базовый — 4 900 ₽</strong>
+                        <strong id="registration-tariff">Базовый — 3 900 ₽</strong>
                         <span id="registration-inclusions">Полный однодневный курс, сертификат, памятка и кофе-брейки.</span>
                         <span>21 ноября · 10:00–18:00. Заявка без оплаты — тариф и место подтвердим по телефону.</span>
                     </p>
@@ -290,9 +290,9 @@
                     Выберите формат участия. Во все тарифы входят материалы, сертификат и доступ к памятке после курса.
                 </p>
                 <div class="pricing-grid">
-                    <article class="pricing-card">
+                    <article class="pricing-card featured">
                         <h3>Базовый</h3>
-                        <div class="price">4 900 ₽</div>
+                        <div class="price">3 900 ₽</div>
                         <ul class="pricing-list">
                             <li>Участие в полном однодневном курсе</li>
                             <li>Сертификат и памятка</li>
@@ -300,7 +300,7 @@
                         </ul>
                         <button type="button" class="btn btn-register">Записаться</button>
                     </article>
-                    <article class="pricing-card featured">
+                    <article class="pricing-card">
                         <h3>Расширенный</h3>
                         <div class="price">7 900 ₽</div>
                         <ul class="pricing-list">

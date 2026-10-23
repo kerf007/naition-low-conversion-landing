@@ -1,0 +1,101 @@
+{
+  "version": "ccd6ce0",
+  "historical_equivalent": "868fd58",
+  "previous": {
+    "visits": 201,
+    "events": {
+      "page_view": 201,
+      "page_exit": 201,
+      "cta_click": 197,
+      "form_view": 200,
+      "form_field_view": 200,
+      "form_submit_view": 200,
+      "form_start": 36,
+      "field_input": 36,
+      "form_success": 36,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 150
+    },
+    "cta_without_input": 161,
+    "cta_and_first_field": 197,
+    "cta_and_submit_view": 197,
+    "cta_details": {
+      "hero": 197
+    },
+    "viewports": {
+      "desktop": 201
+    },
+    "median_seconds": {
+      "input_to_success": 2.766,
+      "cta_to_success": 9.502,
+      "cta_to_exit_nonconverters": 9.844
+    },
+    "field_names": {
+      "name": 36,
+      "phone": 36
+    }
+  },
+  "current": {
+    "visits": 200,
+    "events": {
+      "page_view": 200,
+      "page_exit": 200,
+      "cta_click": 200,
+      "form_view": 200,
+      "form_field_view": 200,
+      "form_submit_view": 200,
+      "form_start": 59,
+      "field_input": 59,
+      "form_success": 59,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 164
+    },
+    "cta_without_input": 141,
+    "cta_and_first_field": 200,
+    "cta_and_submit_view": 200,
+    "cta_details": {
+      "hero": 200
+    },
+    "viewports": {
+      "desktop": 200
+    },
+    "median_seconds": {
+      "input_to_success": 7.399,
+      "cta_to_success": 14.893,
+      "cta_to_exit_nonconverters": 10.625
+    },
+    "field_names": {
+      "name": 59,
+      "phone": 59,
+      "email": 59,
+      "purpose": 59
+    }
+  },
+  "server": {
+    "visits_count": 201,
+    "orders_count": 59,
+    "generated_at": "2026-10-22T10:44:57+00:00"
+  },
+  "excluded": [],
+  "overlapping_full_visit_ids": 0,
+  "statistics": {
+    "difference_vs_immediate_previous_pp": 11.44,
+    "difference_vs_historical_pp": 1.14,
+    "wilson95_current_pct": [
+      23.49,
+      35.99
+    ],
+    "fisher_vs_immediate_previous": 0.0096,
+    "fisher_vs_historical": 0.8264,
+    "fisher_vs_redesign_47_of_201_exploratory": 0.213,
+    "same_version_pooled_orders": 116,
+    "same_version_pooled_visits": 403,
+    "same_version_pooled_cr_pct": 28.78
+  }
+}
