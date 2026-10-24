@@ -1,0 +1,45 @@
+{
+  "no_input": {
+    "visits": 59,
+    "cta_attempts": 73,
+    "cta_count_distribution": {
+      "2": 14,
+      "1": 45
+    },
+    "name_available_after_cta": 59,
+    "name_available_final_snapshot": 59,
+    "exited": 59,
+    "limited": 0,
+    "pointer_visits": 0,
+    "wheel_visits": 59
+  },
+  "success": {
+    "visits": 41,
+    "cta_attempts": 53,
+    "cta_count_distribution": {
+      "1": 29,
+      "2": 12
+    },
+    "name_available_after_cta": 41,
+    "name_available_final_snapshot": 41,
+    "exited": 41,
+    "limited": 0,
+    "pointer_visits": 41,
+    "wheel_visits": 41
+  },
+  "median_last_cta_to_input": 5.798,
+  "cta_sources": {
+    "hero": 126
+  },
+  "no_cta": [
+    {
+      "visitId": "a699b5bd-b642-4d19-abdc-88f48bbb15fd",
+      "ended": false
+    },
+    {
+      "visitId": "dbd6eb56-ed69-4142-a4b8-2ab7bf345bff",
+      "ended": true
+    }
+  ],
+  "program_click_logging_limit": "Accordion toggle buttons are excluded by generic content_click handler; absence of content_click does not imply no accordion interactions."
+}

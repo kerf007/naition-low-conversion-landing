@@ -66,7 +66,7 @@ window.createFormDiagnostics = (sessionId) => {
         while (queue.length) {
             const events = queue.splice(0, 8);
             const body = new Blob([JSON.stringify({session_id: sessionId, tracker_version: 'preinput-v1',
-                ui_version: 'course-flow-v1', experiment_id: 'price3900-course-flow', events})], {type:'application/json'});
+                ui_version: 'program-outcomes-v1', experiment_id: 'price3900-program-outcomes', events})], {type:'application/json'});
             // Batches stay below the browser's keepalive quota. No unbounded retries.
             if (!navigator.sendBeacon?.('diagnostics.php', body)) {
                 fetch('diagnostics.php', {method:'POST', body, keepalive:true}).catch(() => {});

@@ -1,0 +1,87 @@
+{
+  "version": "3be7954",
+  "server": {
+    "visits_count": 102,
+    "orders_count": 41,
+    "generated_at": "2026-10-24T14:25:56+00:00"
+  },
+  "current": {
+    "visits": 102,
+    "events": {
+      "page_view": 102,
+      "page_exit": 101,
+      "cta_click": 100,
+      "form_view": 101,
+      "form_field_view": 101,
+      "form_submit_view": 101,
+      "form_start": 41,
+      "field_input": 41,
+      "form_success": 41,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 102
+    },
+    "cta_without_input": 59,
+    "cta_and_first_field": 100,
+    "cta_and_submit_view": 100,
+    "cta_details": {
+      "hero": 100
+    },
+    "viewports": {
+      "desktop": 102
+    },
+    "median_seconds": {
+      "input_to_success": 4.339,
+      "cta_to_success": 10.599
+    },
+    "field_names": {
+      "email": 41,
+      "phone": 41,
+      "name": 41
+    }
+  },
+  "excluded": [],
+  "diagnostics": {
+    "visits": 102,
+    "counts": {
+      "attempts": 126,
+      "scroll_requested": 126,
+      "focus_requested": 126,
+      "form_arrival": 126,
+      "focus": 126,
+      "input": 41,
+      "success": 41,
+      "pointer_attempt": 41,
+      "returned": 100,
+      "autofocus_without_input": 85,
+      "success_branch": 41
+    },
+    "obstacles": {},
+    "sequence_gaps": 0,
+    "median_seconds": {
+      "return_to_focus": null,
+      "return_to_exit": null
+    },
+    "versions": [
+      "preinput-v1"
+    ],
+    "ui_versions": [
+      "course-flow-v1"
+    ]
+  },
+  "comparison": {
+    "control": "0e927f5-large",
+    "fisher_p": 0.06403507548373501,
+    "wilson95": [
+      0.31204486602704284,
+      0.4989932638055966
+    ],
+    "delta": 0.09518787594719164,
+    "difference95": [
+      -0.0039191654112747665,
+      0.1996703865209161
+    ]
+  }
+}

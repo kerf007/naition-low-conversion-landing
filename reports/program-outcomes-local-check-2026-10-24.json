@@ -1,0 +1,97 @@
+{
+  "layout": [
+    {
+      "width": 1280,
+      "height": 720,
+      "before": {
+        "programHeight": 521,
+        "pageHeight": 6312,
+        "points": 18,
+        "programWords": 776,
+        "formHeight": 220,
+        "overflow": false,
+        "collapsed": true
+      },
+      "expanded": {
+        "height": 308,
+        "inert": false,
+        "hidden": "false",
+        "points": 3
+      },
+      "closed": "false"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "before": {
+        "programHeight": 641,
+        "pageHeight": 10663,
+        "points": 18,
+        "programWords": 776,
+        "formHeight": 470,
+        "overflow": false,
+        "collapsed": true
+      },
+      "expanded": {
+        "height": 820,
+        "inert": false,
+        "hidden": "false",
+        "points": 3
+      },
+      "closed": "false"
+    }
+  ],
+  "openedInLastPage": 6,
+  "events": [
+    {
+      "event": "program_open",
+      "detail": "module_1"
+    },
+    {
+      "event": "program_close",
+      "detail": "module_1"
+    },
+    {
+      "event": "program_open",
+      "detail": "module_1"
+    },
+    {
+      "event": "program_close",
+      "detail": "module_1"
+    },
+    {
+      "event": "program_open",
+      "detail": "module_1"
+    },
+    {
+      "event": "program_open",
+      "detail": "module_2"
+    },
+    {
+      "event": "program_open",
+      "detail": "module_3"
+    },
+    {
+      "event": "program_open",
+      "detail": "module_4"
+    },
+    {
+      "event": "program_open",
+      "detail": "module_5"
+    },
+    {
+      "event": "program_open",
+      "detail": "module_6"
+    },
+    {
+      "event": "program_close",
+      "detail": "module_2"
+    }
+  ],
+  "focus": "name",
+  "diagnosticVersions": [
+    "program-outcomes-v1"
+  ],
+  "bad": [],
+  "errors": []
+}

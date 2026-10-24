@@ -569,6 +569,21 @@ img {
     margin: 0;
 }
 
+.module-outcomes-title {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: var(--heading);
+}
+
+.module-outcomes {
+    margin: 0 0 16px;
+    padding-left: 22px;
+}
+
+.module-outcomes li + li {
+    margin-top: 4px;
+}
+
 .program-module.is-collapsed .program-module-body {
     height: 0;
     padding: 0 24px;

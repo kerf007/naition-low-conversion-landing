@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewport = window.innerWidth < 720 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop';
     trackOnce('page_view', viewport);
 
-    document.querySelectorAll('.program-module').forEach((module) => {
+    document.querySelectorAll('.program-module').forEach((module, index) => {
         const toggle = module.querySelector('.module-toggle');
         const body = module.querySelector('.program-module-body');
         if (!toggle || !body) return;
@@ -80,7 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         setExpanded(false);
         toggle.addEventListener('click', () => {
-            setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+            const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+            setExpanded(expanded);
+            track(expanded ? 'program_open' : 'program_close', `module_${index + 1}`);
         });
     });
 
