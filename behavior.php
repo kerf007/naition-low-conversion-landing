@@ -7,7 +7,7 @@ header('Cache-Control: no-store');
 
 const ALLOWED_EVENTS = [
     'page_view' => ['mobile', 'tablet', 'desktop'],
-    'cta_view' => ['hero', 'pricing_1', 'pricing_2', 'pricing_3'],
+    'cta_view' => ['hero', 'about', 'program', 'pricing_1', 'pricing_2', 'pricing_3'],
     'program_view' => [''],
     'pricing_view' => [''],
     'form_view' => [''],
@@ -16,7 +16,7 @@ const ALLOWED_EVENTS = [
     'scroll_depth' => ['25', '50', '75'],
     'scroll_checkpoint' => ['10', '25', '50', '75', '90', '100'],
     'section_enter' => ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11', 's12'],
-    'cta_click' => ['hero', 'pricing_1', 'pricing_2', 'pricing_3'],
+    'cta_click' => ['hero', 'about', 'program', 'pricing_1', 'pricing_2', 'pricing_3'],
     'pricing_link_click' => [''],
     'content_click' => ['.meta-card', '.feature-card', '.program-module', '.injury-card', '.legal-block', '.instructor-card', '.pricing-card'],
     'form_start' => [''],
@@ -82,7 +82,7 @@ function buildVisits(array $rows): array
         ['selector' => '#registration-form [name="name"]', 'name' => 'name', 'type' => 'text', 'required' => true],
         ['selector' => '#registration-form [name="phone"]', 'name' => 'phone', 'type' => 'tel', 'required' => true],
         ['selector' => '#registration-form [name="email"]', 'name' => 'email', 'type' => 'email', 'required' => true],
-        ['selector' => '#registration-form [name="purpose"]', 'name' => 'purpose', 'type' => 'textarea', 'required' => true],
+        ['selector' => '#registration-form [name="purpose"]', 'name' => 'purpose', 'type' => 'select', 'required' => true],
     ];
 
     foreach ($rows as $row) {

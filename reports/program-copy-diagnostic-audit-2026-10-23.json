@@ -1,0 +1,27 @@
+{
+  "no_input": {
+    "n": 73,
+    "wheel_after_cta": 73,
+    "available_before_exit": 73,
+    "limited": 0,
+    "end_missing": 0
+  },
+  "success": {
+    "n": 27,
+    "wheel_after_cta": 27,
+    "available_before_exit": 27,
+    "limited": 0,
+    "end_missing": 0
+  },
+  "cohort_ids_match": true,
+  "page_heights": {
+    "7551": 74,
+    "7553": 27
+  },
+  "no_cta": [
+    {
+      "visitId": "019d73a2-9151-4312-8724-f5787b9cc6f3",
+      "ended": true
+    }
+  ]
+}

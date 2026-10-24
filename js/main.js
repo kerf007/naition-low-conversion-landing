@@ -68,6 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const viewport = window.innerWidth < 720 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop';
     trackOnce('page_view', viewport);
 
+    document.querySelectorAll('.program-module').forEach((module) => {
+        const toggle = module.querySelector('.module-toggle');
+        const body = module.querySelector('.program-module-body');
+        if (!toggle || !body) return;
+        const setExpanded = (expanded) => {
+            toggle.setAttribute('aria-expanded', String(expanded));
+            body.setAttribute('aria-hidden', String(!expanded));
+            body.inert = !expanded;
+            module.classList.toggle('is-collapsed', !expanded);
+        };
+        setExpanded(false);
+        toggle.addEventListener('click', () => {
+            setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+    });
+
     const setupVisibilityTracking = () => {
         if (!('IntersectionObserver' in window)) {
             return;
@@ -112,6 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         observe(document.querySelector('.hero-register'), 'cta_view', 'hero');
+        document.querySelectorAll('[data-cta-source]').forEach(button => {
+            observe(button, 'cta_view', button.dataset.ctaSource);
+        });
         observe(document.querySelector('.program-list')?.closest('section')?.querySelector('.section-title'), 'program_view');
         observe(document.querySelector('.pricing-section .section-title'), 'pricing_view');
         observe(document.querySelector('#registration .section-title'), 'form_view');
@@ -198,8 +217,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const pricingIndex = pricingCard
                 ? Array.from(document.querySelectorAll('.pricing-card')).indexOf(pricingCard) + 1
                 : 0;
-            diagnostics?.cta(pricingIndex ? `pricing_${pricingIndex}` : 'hero');
-            track('cta_click', pricingIndex ? `pricing_${pricingIndex}` : 'hero');
+            const source = pricingIndex ? `pricing_${pricingIndex}` : button.dataset.ctaSource || 'hero';
+            diagnostics?.cta(source);
+            track('cta_click', source);
 
             const selectedCard = pricingCard ?? document.querySelector('.pricing-card');
             const tariffName = selectedCard?.querySelector('h3')?.textContent?.trim();
@@ -217,7 +237,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             diagnostics?.scrollRequested();
             // 'auto' would inherit the page's CSS smooth scrolling.
-            registrationSection.scrollIntoView({ behavior: 'instant', block: 'start' });
+            const panel = registrationSection.querySelector('.registration-panel') || registrationSection;
+            panel.scrollIntoView({ behavior: 'instant', block: panel.offsetHeight <= window.innerHeight ? 'center' : 'start' });
+            const firstField = form?.elements.namedItem('name');
+            if (firstField instanceof HTMLInputElement) {
+                diagnostics?.focusRequested?.('name');
+                firstField.focus({ preventScroll: true });
+            }
         });
     });
 
@@ -227,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('focusin', (event) => {
         const field = event.target;
-        if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) {
+        if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement)) {
             return;
         }
 
@@ -236,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('input', (event) => {
         const field = event.target;
-        if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) {
+        if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement)) {
             return;
         }
 

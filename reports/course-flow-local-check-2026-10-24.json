@@ -1,0 +1,178 @@
+{
+  "layout": [
+    {
+      "width": 1280,
+      "height": 720,
+      "before": {
+        "heroHeight": 485,
+        "ctaBottom": 368.015625,
+        "pricingY": 1127,
+        "programHeight": 521,
+        "pageHeight": 6312,
+        "overflow": false,
+        "sections": 6,
+        "ctas": 6,
+        "programWords": 634
+      },
+      "after": {
+        "focus": "name",
+        "form": {
+          "top": 295.453125,
+          "bottom": 515.234375,
+          "visible": true
+        },
+        "name": {
+          "top": 325.046875,
+          "bottom": 372.640625,
+          "visible": true
+        },
+        "submit": {
+          "top": 469.234375,
+          "bottom": 515.234375,
+          "visible": true
+        }
+      },
+      "nextFocus": "phone"
+    },
+    {
+      "width": 768,
+      "height": 720,
+      "before": {
+        "heroHeight": 456,
+        "ctaBottom": 338.453125,
+        "pricingY": 1273,
+        "programHeight": 521,
+        "pageHeight": 7488,
+        "overflow": false,
+        "sections": 6,
+        "ctas": 6,
+        "programWords": 634
+      },
+      "after": {
+        "focus": "name",
+        "form": {
+          "top": 295.390625,
+          "bottom": 515.171875,
+          "visible": true
+        },
+        "name": {
+          "top": 324.984375,
+          "bottom": 372.578125,
+          "visible": true
+        },
+        "submit": {
+          "top": 469.171875,
+          "bottom": 515.171875,
+          "visible": true
+        }
+      },
+      "nextFocus": "phone"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "before": {
+        "heroHeight": 560,
+        "ctaBottom": 353.890625,
+        "pricingY": 1834,
+        "programHeight": 641,
+        "pageHeight": 10663,
+        "overflow": false,
+        "sections": 6,
+        "ctas": 6,
+        "programWords": 634
+      },
+      "after": {
+        "focus": "name",
+        "form": {
+          "top": 270.65625,
+          "bottom": 740.8125,
+          "visible": true
+        },
+        "name": {
+          "top": 304.25,
+          "bottom": 359.84375,
+          "visible": true
+        },
+        "submit": {
+          "top": 694.8125,
+          "bottom": 740.8125,
+          "visible": true
+        }
+      },
+      "nextFocus": "phone"
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "before": {
+        "heroHeight": 560,
+        "ctaBottom": 353.890625,
+        "pricingY": 1913,
+        "programHeight": 761,
+        "pageHeight": 11081,
+        "overflow": false,
+        "sections": 6,
+        "ctas": 6,
+        "programWords": 634
+      },
+      "after": {
+        "focus": "name",
+        "form": {
+          "top": 319.328125,
+          "bottom": 789.484375,
+          "visible": false
+        },
+        "name": {
+          "top": 352.921875,
+          "bottom": 408.515625,
+          "visible": true
+        },
+        "submit": {
+          "top": 743.484375,
+          "bottom": 789.484375,
+          "visible": false
+        }
+      },
+      "nextFocus": "phone"
+    }
+  ],
+  "accordion": {
+    "collapsed": {
+      "inert": true,
+      "height": 0,
+      "aria": "true"
+    },
+    "expanded": {
+      "inert": false,
+      "height": 174,
+      "aria": "false"
+    },
+    "closedAgain": "false",
+    "collapsedTextInAX": false,
+    "expandedTextInAX": true
+  },
+  "invalid": true,
+  "submit": {
+    "status": 200,
+    "body": {
+      "ok": true
+    }
+  },
+  "tariff": "Расширенный — 7 900 ₽",
+  "diagnostics": {
+    "versions": [
+      "course-flow-v1"
+    ],
+    "sources": [
+      "hero",
+      "about",
+      "program",
+      "pricing_2"
+    ],
+    "requestedFocus": 7,
+    "purposeInput": 1
+  },
+  "badResponses": [],
+  "errors": []
+}

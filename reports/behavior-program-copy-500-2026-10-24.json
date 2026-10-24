@@ -1,0 +1,61 @@
+{
+  "version": "0e927f5",
+  "server": {
+    "visits_count": 502,
+    "orders_count": 154,
+    "generated_at": "2026-10-24T13:49:04+00:00"
+  },
+  "current": {
+    "visits": 501,
+    "events": {
+      "page_view": 501,
+      "page_exit": 501,
+      "cta_click": 500,
+      "form_view": 500,
+      "form_field_view": 500,
+      "form_submit_view": 500,
+      "form_start": 154,
+      "field_input": 154,
+      "form_success": 154,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 400
+    },
+    "cta_without_input": 346,
+    "cta_and_first_field": 500,
+    "cta_and_submit_view": 500,
+    "cta_details": {
+      "hero": 500
+    },
+    "viewports": {
+      "desktop": 501
+    },
+    "median_seconds": {
+      "input_to_success": 7.359,
+      "cta_to_success": 14.721
+    },
+    "field_names": {
+      "purpose": 154,
+      "phone": 154,
+      "email": 154,
+      "name": 154
+    }
+  },
+  "excluded": [
+    {
+      "visitId": "3cc32034-c5af-4716-a1e8-0fe79a9e9e54",
+      "reason": "No page_view in captured export"
+    },
+    {
+      "visitId": "9f171b7e-96f8-43a1-b20c-085e44650196",
+      "reason": "No page_view in captured export"
+    },
+    {
+      "visitId": "f583933e-82ba-472f-b284-e31dbce0e691",
+      "reason": "No page_view in captured export"
+    }
+  ],
+  "diagnostics_error": "Full export exhausted server PHP memory; aggregate summary saved separately."
+}

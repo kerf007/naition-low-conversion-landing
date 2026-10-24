@@ -66,7 +66,7 @@ window.createFormDiagnostics = (sessionId) => {
         while (queue.length) {
             const events = queue.splice(0, 8);
             const body = new Blob([JSON.stringify({session_id: sessionId, tracker_version: 'preinput-v1',
-                ui_version: 'program-copy-v1', experiment_id: 'price3900-program-copy', events})], {type:'application/json'});
+                ui_version: 'course-flow-v1', experiment_id: 'price3900-course-flow', events})], {type:'application/json'});
             // Batches stay below the browser's keepalive quota. No unbounded retries.
             if (!navigator.sendBeacon?.('diagnostics.php', body)) {
                 fetch('diagnostics.php', {method:'POST', body, keepalive:true}).catch(() => {});
@@ -144,7 +144,7 @@ window.createFormDiagnostics = (sessionId) => {
         if (key) interaction('field_pointerdown',key);
         else if (event.target instanceof Element) {
             const label = event.target.closest('label');
-            interaction('label_pointerdown',fieldKey(label?.querySelector('input,textarea')));
+            interaction('label_pointerdown',fieldKey(label?.querySelector('input,textarea,select')));
         }
     }), {passive:true});
     document.addEventListener('pointerdown', safely((event) => {
@@ -166,8 +166,11 @@ window.createFormDiagnostics = (sessionId) => {
         if (!key || inputFields.has(`${flow}:${key}`)) return;
         inputFields.add(`${flow}:${key}`); inputStarted = true; emit('input',key);
     }));
-    form.addEventListener('keydown', safely((e) => {
-        if (e.key === 'Tab') emit('navigation_key', e.shiftKey ? 'shift_tab' : 'tab');
+    document.addEventListener('keydown', safely((e) => {
+        if (flow && e.key === 'Tab' && !e.repeat) {
+            const key = e.shiftKey ? 'shift_tab' : 'tab';
+            emit('navigation_key', form.contains(e.target) ? key : `${key}_outside`);
+        }
     }));
     let lastMovement = 0;
     ['wheel','touchmove'].forEach(type => window.addEventListener(type,safely(() => {
@@ -186,6 +189,7 @@ window.createFormDiagnostics = (sessionId) => {
             emit('cta',source); geometry('cta'); sampleExposures();
         }),
         scrollRequested: safely(() => { emit('scroll_requested'); clearTimeout(scrollTimer); scrollTimer=setTimeout(settled,400); }),
+        focusRequested: safely((field) => { if (fields.includes(field)) emit('focus_requested',field); }),
         success: safely(() => { emit('success'); flush(); }),
     };
 };

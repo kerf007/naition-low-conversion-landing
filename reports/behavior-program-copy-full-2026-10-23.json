@@ -1,0 +1,86 @@
+{
+  "version": "0e927f5",
+  "server": {
+    "visits_count": 101,
+    "orders_count": 27,
+    "generated_at": "2026-10-23T10:54:48+00:00"
+  },
+  "current": {
+    "visits": 101,
+    "events": {
+      "page_view": 101,
+      "page_exit": 101,
+      "cta_click": 100,
+      "form_view": 100,
+      "form_field_view": 100,
+      "form_submit_view": 100,
+      "form_start": 27,
+      "field_input": 27,
+      "form_success": 27,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 84
+    },
+    "cta_without_input": 73,
+    "cta_and_first_field": 100,
+    "cta_and_submit_view": 100,
+    "cta_details": {
+      "hero": 100
+    },
+    "viewports": {
+      "desktop": 101
+    },
+    "median_seconds": {
+      "input_to_success": 7.509,
+      "cta_to_success": 15.095
+    },
+    "field_names": {
+      "email": 27,
+      "purpose": 27,
+      "name": 27,
+      "phone": 27
+    }
+  },
+  "excluded": [],
+  "diagnostics": {
+    "visits": 101,
+    "counts": {
+      "attempts": 100,
+      "scroll_requested": 100,
+      "form_arrival": 100,
+      "focus": 27,
+      "input": 27,
+      "success": 27,
+      "pointer_attempt": 27,
+      "returned": 100,
+      "available_without_attempt": 70,
+      "success_branch": 27,
+      "snapshot_obstacle": 3
+    },
+    "obstacles": {
+      "outside_view": 3
+    },
+    "sequence_gaps": 0,
+    "median_seconds": {
+      "return_to_focus": 0.571,
+      "return_to_exit": 2.294
+    },
+    "versions": [
+      "preinput-v1"
+    ],
+    "ui_versions": [
+      "program-copy-v1"
+    ]
+  },
+  "comparison": {
+    "control": "a56d22d",
+    "fisher_p": 0.7551686418959469,
+    "wilson95": [
+      0.19070960286947908,
+      0.36099446030669075
+    ],
+    "spacing_fisher_p": 0.41434397254529504
+  }
+}

@@ -39,6 +39,18 @@ class ClassificationTests(unittest.TestCase):
         self.assertEqual(counts['focus_without_input'],1)
         self.assertEqual(counts['pointer_attempt'],0)
 
+    def test_requested_focus_does_not_count_as_input_or_pointer(self):
+        counts=self.summarize([event(1,'cta'),event(2,'focus_requested','name'),event(3,'focus','name'),event(4,'exit')])
+        self.assertEqual(counts['autofocus_without_input'],1)
+        self.assertEqual(counts['input'],0)
+        self.assertEqual(counts['pointer_attempt'],0)
+        self.assertNotIn('focus_without_input',counts)
+
+    def test_pointer_after_autofocus_is_an_observed_interaction(self):
+        counts=self.summarize([event(1,'cta'),event(2,'focus_requested','name'),event(3,'focus','name'),event(4,'field_pointerdown','name'),event(5,'exit')])
+        self.assertEqual(counts['focus_without_input'],1)
+        self.assertNotIn('autofocus_without_input',counts)
+
     def test_retries_are_separate_attempts(self):
         counts=self.summarize([event(1,'cta'),event(2,'focus','name'),event(3,'cta',flow=2),event(4,'success',flow=2),event(5,'exit',flow=2)])
         self.assertEqual(counts['attempts'],2)

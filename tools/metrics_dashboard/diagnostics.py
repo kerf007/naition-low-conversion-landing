@@ -27,7 +27,7 @@ def summarize(export):
             types = {e["event"] for e in rows}
             ended = "exit" in types or any(e["event"] == "cta" and e["flowId"] > flow for e in events)
             counts["attempts"] += 1
-            for name in ["scroll_requested", "form_arrival", "focus", "input", "success"]:
+            for name in ["scroll_requested", "focus_requested", "form_arrival", "focus", "input", "success"]:
                 counts[name] += name in types
             counts["pointer_attempt"] += bool(types & {"field_pointerdown", "field_region_pointerdown", "label_pointerdown"})
             counts["returned"] += any(e["event"] == "form_arrival" and e["detail"] == "return" for e in rows)
@@ -47,7 +47,9 @@ def summarize(export):
             elif "input" in types:
                 counts["input_without_success"] += 1
             elif "focus" in types:
-                counts["focus_without_input"] += 1
+                requested_only = "focus_requested" in types and not types & {
+                    "field_pointerdown", "field_region_pointerdown", "label_pointerdown", "navigation_key"}
+                counts["autofocus_without_input" if requested_only else "focus_without_input"] += 1
             elif types & {"field_pointerdown", "field_region_pointerdown", "label_pointerdown"}:
                 counts["attempt_without_focus"] += 1
             else:
@@ -101,14 +103,28 @@ def saved_diagnostics():
     root = ROOT / 'data'
     for folder in sorted(root.glob('visits-*')):
         path = folder / 'diagnostics.json'
-        if folder.is_symlink() or path.is_symlink() or not path.is_file():
+        if folder.is_symlink() or path.is_symlink():
+            continue
+        if not path.is_file():
+            failure = folder / 'diagnostics-error.txt'
+            capture = folder / 'capture.json'
+            if failure.is_file() and not failure.is_symlink():
+                captured_at = None
+                if capture.is_file() and not capture.is_symlink():
+                    try:
+                        captured_at = json.loads(capture.read_text()).get('captured_at')
+                    except (ValueError, OSError):
+                        pass
+                result.append({'id': folder.name, 'captured_at': captured_at,
+                               'error': 'Подробная диагностика недоступна: сервер не смог выгрузить журнал. Эти данные не заменяются нулями.'})
             continue
         try:
             export = json.loads(path.read_text())
             result.extend(version_summaries(export, folder.name))
         except (OSError, ValueError, KeyError, TypeError):
             result.append({"id":folder.name, "error":"Не удалось прочитать диагностический экспорт"})
-    return {"exports":result}
+    # Folder names describe experiments; their alphabetical order is not chronological.
+    return {"exports":sorted(result, key=lambda row: (row.get('captured_at') or '', row['id']))}
 
 
 if __name__ == '__main__':

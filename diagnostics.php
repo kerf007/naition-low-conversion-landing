@@ -8,13 +8,14 @@ const FIELDS = ['name', 'phone', 'email', 'purpose'];
 const NODES = ['form', 'summary', 'submit', 'name', 'phone', 'email', 'purpose',
     'label_name', 'label_phone', 'label_email', 'label_purpose'];
 const EVENTS = [
-    'context' => [''], 'cta' => ['hero', 'pricing_1', 'pricing_2', 'pricing_3'],
+    'context' => [''], 'cta' => ['hero', 'about', 'program', 'pricing_1', 'pricing_2', 'pricing_3'],
     'scroll_requested' => [''], 'scroll_settled' => [''], 'form_arrival' => ['initial', 'return'],
     'exposure_start' => ['form', 'summary', 'submit', 'name', 'phone', 'email', 'purpose'],
     'exposure_end' => ['form', 'summary', 'submit', 'name', 'phone', 'email', 'purpose'],
     'geometry' => ['cta', 'settled', 'interaction', 'hidden', 'exit'],
     'field_pointerdown' => FIELDS, 'field_region_pointerdown' => FIELDS, 'label_pointerdown' => FIELDS, 'focus' => FIELDS,
-    'blur' => FIELDS, 'input' => FIELDS, 'navigation_key' => ['tab', 'shift_tab'],
+    'blur' => FIELDS, 'input' => FIELDS, 'focus_requested' => FIELDS,
+    'navigation_key' => ['tab', 'shift_tab', 'tab_outside', 'shift_tab_outside'],
     'scroll_input' => ['wheel', 'touchmove'], 'visibility' => ['visible', 'hidden'],
     'success' => [''], 'exit' => [''], 'capture_limited' => ['events', 'geometry', 'flows'],
 ];
@@ -82,6 +83,7 @@ try {
                 ['3858c95-instant', 'price3900-instant-scroll'],
                 ['program-spacing-v1', 'price3900-program-spacing'],
                 ['program-copy-v1', 'price3900-program-copy'],
+                ['course-flow-v1', 'price3900-course-flow'],
             ], true)
             || !is_array($data['events']) || !array_is_list($data['events'])
             || count($data['events']) < 1 || count($data['events']) > 8) reply(400, ['ok'=>false, 'error'=>'Invalid batch']);
@@ -113,16 +115,27 @@ try {
         }
         $rows = $pdo->query('SELECT session_id, seq, flow_id, tracker_version, ui_version, experiment_id,
             event_name, detail, elapsed_ms, state_json FROM form_diagnostics ORDER BY session_id, seq');
-        $visits = [];
-        foreach ($rows as $row) {
+        // Keep one visit in memory; a 500-visit geometry export can exceed 128 MB.
+        $visit = null;
+        $first = true;
+        echo '{"visits":[';
+        while ($row = $rows->fetch(PDO::FETCH_ASSOC)) {
             $id = $row['session_id'];
-            if (!isset($visits[$id])) $visits[$id] = ['visitId'=>$id, 'trackerVersion'=>$row['tracker_version'],
-                'uiVersion'=>$row['ui_version'], 'experimentId'=>$row['experiment_id'], 'events'=>[]];
-            $visits[$id]['events'][] = ['seq'=>(int)$row['seq'], 'flowId'=>(int)$row['flow_id'],
+            if ($visit === null || $visit['visitId'] !== $id) {
+                if ($visit !== null) {
+                    echo ($first ? '' : ',') . json_encode($visit, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
+                    $first = false;
+                }
+                $visit = ['visitId'=>$id, 'trackerVersion'=>$row['tracker_version'],
+                    'uiVersion'=>$row['ui_version'], 'experimentId'=>$row['experiment_id'], 'events'=>[]];
+            }
+            $visit['events'][] = ['seq'=>(int)$row['seq'], 'flowId'=>(int)$row['flow_id'],
                 'event'=>$row['event_name'], 'detail'=>$row['detail'], 'tMs'=>(int)$row['elapsed_ms'],
                 'state'=>json_decode($row['state_json'],true)];
         }
-        reply(200, ['visits'=>array_values($visits), 'generated_at'=>gmdate(DATE_ATOM)]);
+        if ($visit !== null) echo ($first ? '' : ',') . json_encode($visit, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
+        echo '],"generated_at":' . json_encode(gmdate(DATE_ATOM)) . '}';
+        exit;
     }
     $pdo->beginTransaction();
     $stmt = $pdo->prepare('INSERT OR IGNORE INTO form_diagnostics

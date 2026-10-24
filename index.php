@@ -28,73 +28,17 @@
         <div class="container hero-content">
             <span class="hero-badge">Офлайн-курс · 21 ноября 2026</span>
             <h1>Первая помощь: практический курс для каждого</h1>
-            <p class="hero-text">
-                Научитесь действовать уверенно в экстренной ситуации: остановить кровотечение,
-                провести сердечно-легочную реанимацию, помочь при травмах и ожогах до приезда
-                медиков. Курс построен на практике с инструкторами, которые каждый день работают
-                с реальными вызовами.
-            </p>
+            <p class="hero-text">Отработайте помощь при остановке сердца, кровотечениях, травмах и ожогах на манекенах и в паре с инструктором.</p>
             <div class="hero-actions">
-                <button type="button" class="btn btn-register hero-register">Оставить заявку на базовый курс</button>
+                <button type="button" class="btn btn-register hero-register">Записаться на курс · 3 900 ₽</button>
                 <a class="hero-secondary" href="#pricing">Сравнить тарифы</a>
             </div>
-            <p class="hero-price">3 900 ₽ · очный курс 10:00–18:00 · заявка без оплаты</p>
-            <div class="meta-grid">
-                <div class="meta-card">
-                    <strong>Дата</strong>
-                    21 ноября 2026, суббота
-                </div>
-                <div class="meta-card">
-                    <strong>Время</strong>
-                    10:00 – 18:00, перерыв на обед
-                </div>
-                <div class="meta-card">
-                    <strong>Место</strong>
-                    Москва, ул. Примерная, 10, учебный центр «Спаси-Себя»
-                </div>
-            </div>
-            <div class="hero-note">
-                На курсе вы отработаете навыки на манекенах и отработаете сценарии, которые
-                помогают сохранить спокойствие и принимать правильные решения под давлением времени.
-                После занятия вы получите сертификат и памятку по алгоритмам первой помощи.
-            </div>
+            <p class="hero-price">21 ноября · 10:00–18:00 · заявка без оплаты</p>
+            <p class="hero-location">Москва, ул. Примерная, 10, учебный центр «Спаси-Себя»</p>
         </div>
     </header>
 
     <main>
-        <section class="section registration-section" id="registration">
-            <div class="container">
-                <div class="registration-panel">
-                    <h2 class="section-title">Записаться на курс</h2>
-                    <p class="section-lead registration-summary" id="registration-summary" aria-live="polite">
-                        <strong id="registration-tariff">Базовый — 3 900 ₽</strong>
-                        <span id="registration-inclusions">Полный однодневный курс, сертификат, памятка и кофе-брейки.</span>
-                        <span>21 ноября · 10:00–18:00. Заявка без оплаты — тариф и место подтвердим по телефону.</span>
-                    </p>
-                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
-                        <label>
-                            Имя
-                            <input type="text" name="name" required autocomplete="name">
-                        </label>
-                        <label>
-                            Телефон
-                            <input type="tel" name="phone" required autocomplete="tel">
-                        </label>
-                        <label>
-                            E-mail
-                            <input type="email" name="email" required autocomplete="email">
-                        </label>
-                        <label>
-                            Для чего вам курс? Достаточно пары слов
-                            <textarea name="purpose" required placeholder="Например: хочу уметь помочь близким"></textarea>
-                        </label>
-                        <button type="submit" class="btn">Отправить заявку</button>
-                    </form>
-                    <p class="form-message" id="form-message" aria-live="polite"></p>
-                </div>
-            </div>
-        </section>
-
         <section class="section">
             <div class="container">
                 <h2 class="section-title">О курсе</h2>
@@ -104,7 +48,7 @@
                 </p>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <h3>8 часов практики</h3>
+                        <h3>Однодневный практический курс</h3>
                         <p>Больше половины времени посвящено тренировкам на манекенах, имитации травм и работе в парах.</p>
                     </article>
                     <article class="feature-card">
@@ -120,167 +64,7 @@
                         <p>До 14 человек в группе, чтобы каждый успел отработать все ключевые навыки несколько раз.</p>
                     </article>
                 </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Программа курса</h2>
-                <p class="section-lead program-intro">
-                    Каждый модуль включает объяснение, демонстрацию инструктора и вашу практику.
-                    Вот что вы отработаете за день.
-                </p>
-                <div class="program-list">
-                    <article class="program-module">
-                        <h3>10:00 – 11:00 · Оценка обстановки и безопасность</h3>
-                        <p>
-                            Отработаете проверку безопасности, сознания и дыхания, вызов скорой.
-                        </p>
-                    </article>
-                    <article class="program-module">
-                        <h3>11:00 – 12:30 · Сердечно-легочная реанимация</h3>
-                        <p>
-                            Отработаете компрессии и искусственное дыхание на манекене, применение учебного дефибриллятора.
-                        </p>
-                    </article>
-                    <article class="program-module">
-                        <h3>12:30 – 13:30 · Обед и разбор кейсов</h3>
-                        <p>
-                            Пообедаете, разберёте случаи из практики и вопросы по утренним занятиям.
-                        </p>
-                    </article>
-                    <article class="program-module">
-                        <h3>13:30 – 15:00 · Кровотечения и шок</h3>
-                        <p>
-                            Наложите давящую повязку и турникет на имитаторы ран, разберёте помощь при шоке.
-                        </p>
-                    </article>
-                    <article class="program-module">
-                        <h3>15:00 – 16:30 · Переломы, вывихи, ожоги</h3>
-                        <p>
-                            Отработаете фиксацию конечности и помощь при ожогах, разберёте опасные ошибки.
-                        </p>
-                    </article>
-                    <article class="program-module">
-                        <h3>16:30 – 18:00 · Итоговая практика и сертификация</h3>
-                        <p>
-                            Пройдёте сценарии помощи, получите обратную связь инструктора и сертификат.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Виды травм и состояний</h2>
-                <p class="section-lead">
-                    На курсе мы разбираем самые частые состояния, с которыми сталкиваются очевидцы
-                    в городе, дома, на работе и в путешествиях.
-                </p>
-                <div class="injury-grid">
-                    <article class="injury-card">
-                        <h3>Кровотечения</h3>
-                        <p>Артериальные, венозные и капиллярные кровотечения, давящая повязка, турникет, контроль после остановки крови.</p>
-                    </article>
-                    <article class="injury-card">
-                        <h3>Переломы и вывихи</h3>
-                        <p>Признаки перелома, иммобилизация, транспортная шина, ошибки при перемещении пострадавшего.</p>
-                    </article>
-                    <article class="injury-card">
-                        <h3>Ожоги</h3>
-                        <p>Термические и химические ожоги, охлаждение, стерильная повязка, когда нельзя снимать одежду с места ожога.</p>
-                    </article>
-                    <article class="injury-card">
-                        <h3>Обмороки и шок</h3>
-                        <p>Признаки шока, положение тела, контроль дыхания, согревание, что нельзя давать пострадавшему.</p>
-                    </article>
-                    <article class="injury-card">
-                        <h3>Остановка дыхания</h3>
-                        <p>СЛР, работа в паре, использование автоматического дефibrиллятора, действия до приезда скорой.</p>
-                    </article>
-                    <article class="injury-card">
-                        <h3>Травмы головы и позвоночника</h3>
-                        <p>Подозрение на травму шеи и спины, когда нельзя менять положение, фиксация головы и ожидание медиков.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section legal-section">
-            <div class="container">
-                <h2 class="section-title">Юридические аспекты</h2>
-                <p class="section-lead">
-                    Многие люди боятся помогать из-за страха юридической ответственности. На курсе
-                    мы отдельно разбираем, что говорит закон и как действовать правильно.
-                </p>
-                <div class="legal-block">
-                    <h3>Добросовестный помощник</h3>
-                    <p>
-                        В России действует принцип добросовестного помощника: если вы помогаете пострадавшему
-                        в разумных пределах своих возможностей и без грубой неосторожности, закон защищает
-                        вас от необоснованных претензий.
-                    </p>
-                </div>
-                <div class="legal-block">
-                    <h3>Границы ответственности</h3>
-                    <p>
-                        Мы разбираем, какие действия считаются разумными, когда нужно дождаться медиков,
-                        и как фиксировать обстоятельства происшествия, если вы оказались свидетелем или участником помощи.
-                    </p>
-                </div>
-                <div class="legal-block">
-                    <h3>Документирование и вызов служб</h3>
-                    <p>
-                        Как правильно передать информацию диспетчеру, что сообщить медикам по прибытии и
-                        какие данные важно сохранить для дальнейшего разбирательства или страхового случая.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="emotional-photo">
-            <img src="images/cpr-training.jpg" alt="Практика сердечно-легочной реанимации на манекене">
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Инструкторы</h2>
-                <p class="section-lead">
-                    Курс ведут специалисты с многолетним опытом работы в экстренной медицине и обучения.
-                </p>
-                <div class="instructors-grid">
-                    <article class="instructor-card">
-                        <div class="instructor-photo">АК</div>
-                        <h3>Алексей Кравцов</h3>
-                        <p class="instructor-title">Врач скорой медицинской помощи, стаж 14 лет</p>
-                        <ul class="credentials">
-                            <li>Более 8 000 выездов бригады скорой помощи</li>
-                            <li>Сертификат European Resuscitation Council BLS</li>
-                            <li>Автор программы «Первая помощь дома и на работе»</li>
-                        </ul>
-                    </article>
-                    <article class="instructor-card">
-                        <div class="instructor-photo">МС</div>
-                        <h3>Марина Соколова</h3>
-                        <p class="instructor-title">Инструктор РКК, фельдшер, стаж 11 лет</p>
-                        <ul class="credentials">
-                            <li>Обучила более 1 200 слушателей базовой первой помощи</li>
-                            <li>Член региональной команды инструкторов РКК</li>
-                            <li>Специализация: помощь детям и подросткам</li>
-                        </ul>
-                    </article>
-                    <article class="instructor-card">
-                        <div class="instructor-photo">ДН</div>
-                        <h3>Дмитрий Новиков</h3>
-                        <p class="instructor-title">Парамедик, наставник учебного центра</p>
-                        <ul class="credentials">
-                            <li>Сертификат ERC First Aid Provider</li>
-                            <li>Опыт работы в корпоративных программах безопасности</li>
-                            <li>Ведёт практические блоки по кровотечениям и травмам</li>
-                        </ul>
-                    </article>
-                </div>
+            <button type="button" class="btn btn-register section-register" data-cta-source="about">Оставить заявку на курс</button>
             </div>
         </section>
 
@@ -323,6 +107,196 @@
                     </article>
                 </div>
             </div>
+        </section>
+
+        <section class="section registration-section" id="registration">
+            <div class="container">
+                <div class="registration-panel">
+                    <h2 class="section-title">Записаться на курс</h2>
+                    <p class="section-lead registration-summary" id="registration-summary" aria-live="polite">
+                        <strong id="registration-tariff">Базовый — 3 900 ₽</strong>
+                        <span id="registration-inclusions">Полный однодневный курс, сертификат, памятка и кофе-брейки.</span>
+                        <span>21 ноября · 10:00–18:00. Заявка без оплаты — тариф и место подтвердим по телефону.</span>
+                    </p>
+                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
+                        <label>
+                            Имя
+                            <input type="text" name="name" required autocomplete="name">
+                        </label>
+                        <label>
+                            Телефон
+                            <input type="tel" name="phone" required autocomplete="tel">
+                        </label>
+                        <label>
+                            E-mail
+                            <input type="email" name="email" required autocomplete="email">
+                        </label>
+                        <label>
+                            Для чего вам курс?
+                            <select name="purpose" required>
+                                <option value="Помощь близким" selected>Помощь близким</option>
+                                <option value="Навыки для работы">Навыки для работы</option>
+                                <option value="Подготовка к поездкам">Подготовка к поездкам</option>
+                                <option value="Обучение команды">Обучение команды</option>
+                                <option value="Другая цель">Другая цель</option>
+                            </select>
+                        </label>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                    <p class="form-message" id="form-message" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Программа курса</h2>
+                <p class="section-lead program-intro">Шесть модулей с объяснением и практикой. Раскройте тему, чтобы прочитать подробную программу.</p>
+                <div class="program-list">
+                                        <article class="program-module">
+                        <h3><button type="button" class="module-toggle" id="module-toggle-1" aria-expanded="true" aria-controls="module-body-1">10:00 – 11:00 · Оценка обстановки и безопасность</button></h3>
+                        <div class="program-module-body" id="module-body-1" role="region" aria-labelledby="module-toggle-1">
+                            <p>Первый час посвящён тому, как не бросаться помогать вслепую и не попасть самому под угрозу. Мы разберём последовательность действий при любом происшествии: остановиться, оглядеть место, определить число пострадавших, понять, что именно произошло и насколько ситуация опасна для вас и окружающих. Отдельно поговорим о том, как правильно подойти к человеку, проверить сознание и дыхание, не повредив ему шею или позвоночник, и как громко, чётко попросить кого-то из свидетелей вызвать скорую, пока вы начинаете помощь. Инструктор покажет типичные ошибки — паника, лишние перемещения, попытка «оживить» человека не тем способом — и вы отработаете спокойный сценарий на манекене и в паре с напарником.</p>
+                        </div>
+                    </article>
+                                        <article class="program-module">
+                        <h3><button type="button" class="module-toggle" id="module-toggle-2" aria-expanded="true" aria-controls="module-body-2">11:00 – 12:30 · Сердечно-легочная реанимация</button></h3>
+                        <div class="program-module-body" id="module-body-2" role="region" aria-labelledby="module-toggle-2">
+                            <p>Это центральный блок курса: полтора часа интенсивной практики по алгоритму СЛР для взрослых. Вы научитесь определять, когда нужна реанимация, как правильно положить пострадавшего, куда и как с силой надавливать на грудную клетку, с какой частотой и глубиной, и когда можно не делать искусственное дыхание, а ограничиться только компрессиями. Мы отработаем смену спасателя, работу в паре и втроём, использование тренировочного автоматического дефibrиллятора AED: как включить прибор, куда приложить электроды и как не мешать ему анализировать ритм. Каждый участник несколько раз пройдёт полный цикл «обнаружил — проверил — начал СЛР — дождался скорой», чтобы руки запомнили движения, а голова — порядок действий.</p>
+                        </div>
+                    </article>
+                                        <article class="program-module">
+                        <h3><button type="button" class="module-toggle" id="module-toggle-3" aria-expanded="true" aria-controls="module-body-3">12:30 – 13:30 · Обед и разбор кейсов</button></h3>
+                        <div class="program-module-body" id="module-body-3" role="region" aria-labelledby="module-toggle-3">
+                            <p>После насыщенного утреннего блока — пауза и спокойный разбор реальных историй из практики инструкторов. Мы разберём случаи, когда своевременная помощь очевидца действительно спасла жизнь, и ситуации, где из-за неправильных действий пострадавшему стало хуже. Вы услышите, как люди описывают момент, когда «замерли» от страха, и какие простые фразы и шаги помогают включиться в работу. Это не лекция «про закон», а живой диалог: можно задать любой вопрос, который остался после утра, обсудить свой страх перед кровью, незнанием или ответственностью. Такой формат помогает закрепить материал и понять, что ошибки на тренировке — нормальная часть обучения, а на курсе как раз для этого и создана безопасная среда.</p>
+                        </div>
+                    </article>
+                                        <article class="program-module">
+                        <h3><button type="button" class="module-toggle" id="module-toggle-4" aria-expanded="true" aria-controls="module-body-4">13:30 – 15:00 · Кровотечения и шок</button></h3>
+                        <div class="program-module-body" id="module-body-4" role="region" aria-labelledby="module-toggle-4">
+                            <p>После обеда переходим к одной из самых частых причин смертности при травмах — наружным кровотечениям. Вы научитесь отличать капиллярное, венозное и артериальное кровотечение по виду крови и скорости потери, накладывать давящую повязку из того, что есть под рукой, правильно использовать турникет и понимать, когда без него не обойтись. Отдельный блок посвящён признакам шока: бледность, холодный пот, слабый пульс, спутанность сознания — и тому, как уложить человека, сохранить тепло, контролировать дыхание и не давать ему есть или пить. На практике вы будете работать с имитаторами ран, учиться не бояться крови и действовать системно, даже если вокруг шумно и страшно.</p>
+                        </div>
+                    </article>
+                                        <article class="program-module">
+                        <h3><button type="button" class="module-toggle" id="module-toggle-5" aria-expanded="true" aria-controls="module-body-5">15:00 – 16:30 · Переломы, вывихи, ожоги</button></h3>
+                        <div class="program-module-body" id="module-body-5" role="region" aria-labelledby="module-toggle-5">
+                            <p>В этом модуле мы разбираем травмы, с которыми люди чаще всего сталкиваются дома, на улице, на работе и в спорте. Вы научитесь распознавать признаки перелома и вывиха, фиксировать конечность подручными средствами, не усугубляя повреждение при перемещении, и понимать, когда пострадавшего вообще нельзя трогать до приезда медиков. Отдельно отработаем помощь при ожогах: охлаждение, снятие украшений и одежды там, где это безопасно, накладывание стерильной повязки и типичные ошибки вроде смазывания раны маслом или кремом. Инструктор покажет, как из ремня, журнала и шарфа сделать временную шину, и каждый участник попробует иммобилизацию на напарнике под контролем группы.</p>
+                        </div>
+                    </article>
+                                        <article class="program-module">
+                        <h3><button type="button" class="module-toggle" id="module-toggle-6" aria-expanded="true" aria-controls="module-body-6">16:30 – 18:00 · Итоговая практика и сертификация</button></h3>
+                        <div class="program-module-body" id="module-body-6" role="region" aria-labelledby="module-toggle-6">
+                            <p>Завершающий блок — это уже не отдельные навыки, а цельные сценарии, как в реальной жизни. Вас ждут упражнения с несколькими пострадавшими, шумом, ограниченным временем и необходимостью расставить приоритеты: кому помочь первым, кого просто укрыть и согреть, а кому срочно нужна СЛР. Инструкторы будут наблюдать, подсказывать и разбирать действия сразу после каждого прогона. В конце — короткая индивидуальная обратная связь, ответы на оставшиеся вопросы и вручение сертификатов. Вы уйдёте с ощущением, что уже не просто «слышали про первую помощь», а несколько раз делали её руками и знаете, с чего начать, если рядом окажется человек, которому нужна помощь.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <h2 class="section-title subsection-title">Виды травм и состояний</h2>
+                <p class="section-lead">
+                    На курсе мы разбираем самые частые состояния, с которыми сталкиваются очевидцы
+                    в городе, дома, на работе и в путешествиях.
+                </p>
+                <div class="injury-grid">
+                    <article class="injury-card">
+                        <h3>Кровотечения</h3>
+                        <p>Артериальные, венозные и капиллярные кровотечения, давящая повязка, турникет, контроль после остановки крови.</p>
+                    </article>
+                    <article class="injury-card">
+                        <h3>Переломы и вывихи</h3>
+                        <p>Признаки перелома, иммобилизация, транспортная шина, ошибки при перемещении пострадавшего.</p>
+                    </article>
+                    <article class="injury-card">
+                        <h3>Ожоги</h3>
+                        <p>Термические и химические ожоги, охлаждение, стерильная повязка, когда нельзя снимать одежду с места ожога.</p>
+                    </article>
+                    <article class="injury-card">
+                        <h3>Обмороки и шок</h3>
+                        <p>Признаки шока, положение тела, контроль дыхания, согревание, что нельзя давать пострадавшему.</p>
+                    </article>
+                    <article class="injury-card">
+                        <h3>Остановка дыхания</h3>
+                        <p>СЛР, работа в паре, использование автоматического дефibrиллятора, действия до приезда скорой.</p>
+                    </article>
+                    <article class="injury-card">
+                        <h3>Травмы головы и позвоночника</h3>
+                        <p>Подозрение на травму шеи и спины, когда нельзя менять положение, фиксация головы и ожидание медиков.</p>
+                    </article>
+                </div>
+
+                <h2 class="section-title subsection-title">Инструкторы</h2>
+                <p class="section-lead">
+                    Курс ведут специалисты с многолетним опытом работы в экстренной медицине и обучения.
+                </p>
+                <div class="instructors-grid">
+                    <article class="instructor-card">
+                        <div class="instructor-photo">АК</div>
+                        <h3>Алексей Кравцов</h3>
+                        <p class="instructor-title">Врач скорой медицинской помощи, стаж 14 лет</p>
+                        <ul class="credentials">
+                            <li>Более 8 000 выездов бригады скорой помощи</li>
+                            <li>Сертификат European Resuscitation Council BLS</li>
+                            <li>Автор программы «Первая помощь дома и на работе»</li>
+                        </ul>
+                    </article>
+                    <article class="instructor-card">
+                        <div class="instructor-photo">МС</div>
+                        <h3>Марина Соколова</h3>
+                        <p class="instructor-title">Инструктор РКК, фельдшер, стаж 11 лет</p>
+                        <ul class="credentials">
+                            <li>Обучила более 1 200 слушателей базовой первой помощи</li>
+                            <li>Член региональной команды инструкторов РКК</li>
+                            <li>Специализация: помощь детям и подросткам</li>
+                        </ul>
+                    </article>
+                    <article class="instructor-card">
+                        <div class="instructor-photo">ДН</div>
+                        <h3>Дмитрий Новиков</h3>
+                        <p class="instructor-title">Парамедик, наставник учебного центра</p>
+                        <ul class="credentials">
+                            <li>Сертификат ERC First Aid Provider</li>
+                            <li>Опыт работы в корпоративных программах безопасности</li>
+                            <li>Ведёт практические блоки по кровотечениям и травмам</li>
+                        </ul>
+                    </article>
+                </div>
+            <button type="button" class="btn btn-register section-register" data-cta-source="program">Оставить заявку на курс</button>
+            </div>
+        </section>
+
+        <section class="section legal-section">
+            <div class="container">
+                <h2 class="section-title">Юридические аспекты</h2>
+                <p class="section-lead">
+                    Многие люди боятся помогать из-за страха юридической ответственности. На курсе
+                    мы отдельно разбираем, что говорит закон и как действовать правильно.
+                </p>
+                <div class="legal-block">
+                    <h3>Добросовестный помощник</h3>
+                    <p>
+                        В России действует принцип добросовестного помощника: если вы помогаете пострадавшему
+                        в разумных пределах своих возможностей и без грубой неосторожности, закон защищает
+                        вас от необоснованных претензий.
+                    </p>
+                </div>
+                <div class="legal-block">
+                    <h3>Границы ответственности</h3>
+                    <p>
+                        Мы разбираем, какие действия считаются разумными, когда нужно дождаться медиков,
+                        и как фиксировать обстоятельства происшествия, если вы оказались свидетелем или участником помощи.
+                    </p>
+                </div>
+                <div class="legal-block">
+                    <h3>Документирование и вызов служб</h3>
+                    <p>
+                        Как правильно передать информацию диспетчеру, что сообщить медикам по прибытии и
+                        какие данные важно сохранить для дальнейшего разбирательства или страхового случая.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="emotional-photo">
+            <img src="images/cpr-training.jpg" alt="Практика сердечно-легочной реанимации на манекене">
         </section>
     </main>
 
