@@ -237,6 +237,65 @@ img {
     margin-bottom: 0;
 }
 
+.emotional-photo {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: min(70vh, 560px);
+    padding: 32px 0;
+}
+
+.emotional-photo img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-offer {
+    max-width: 560px;
+    padding: 28px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--shadow);
+}
+
+.photo-offer h2 {
+    margin: 0 0 16px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.25;
+    color: var(--heading);
+}
+
+.photo-offer-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--heading);
+}
+
+.btn.photo-register {
+    background: #2f6f5d;
+    color: var(--white);
+}
+
+.photo-offer-note {
+    margin: 12px 0 0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+    .emotional-photo {
+        padding: 24px 0;
+    }
+
+    .photo-offer {
+        padding: 20px;
+    }
+}
+
 .instructors-grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }

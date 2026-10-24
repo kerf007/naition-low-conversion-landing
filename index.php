@@ -295,6 +295,18 @@
             </div>
         </section>
 
+        <section class="emotional-photo" aria-labelledby="photo-offer-title">
+            <img src="images/cpr-training.jpg" width="1600" height="1067" alt="Практика сердечно-легочной реанимации на манекене">
+            <div class="container">
+                <div class="photo-offer">
+                    <h2 id="photo-offer-title">Отработайте навыки первой помощи на практике</h2>
+                    <p>21 ноября · 10:00–18:00 · Москва</p>
+                    <p class="photo-offer-price">Базовый курс — 3 900 ₽</p>
+                    <button type="button" class="btn btn-register photo-register" data-cta-source="photo">Записаться на базовый курс</button>
+                    <p class="photo-offer-note">Заявка без оплаты. Тариф и место подтвердим по телефону.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">

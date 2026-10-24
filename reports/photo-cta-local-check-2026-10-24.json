@@ -1,0 +1,104 @@
+{
+  "layout": [
+    {
+      "width": 1280,
+      "height": 720,
+      "offer": {
+        "sectionHeight": 504,
+        "imageLoaded": true,
+        "button": {
+          "width": 504,
+          "height": 46,
+          "top": 431.421875,
+          "bottom": 477.421875
+        },
+        "overflow": false,
+        "programWords": 634,
+        "ctaCount": 7
+      },
+      "after": {
+        "focus": "name",
+        "tariff": "Базовый — 3 900 ₽",
+        "formHeight": 220
+      },
+      "nextFocus": "phone"
+    },
+    {
+      "width": 768,
+      "height": 720,
+      "offer": {
+        "sectionHeight": 504,
+        "imageLoaded": true,
+        "button": {
+          "width": 504,
+          "height": 46,
+          "top": 421.53125,
+          "bottom": 467.53125
+        },
+        "overflow": false,
+        "programWords": 634,
+        "ctaCount": 7
+      },
+      "after": {
+        "focus": "name",
+        "tariff": "Базовый — 3 900 ₽",
+        "formHeight": 220
+      },
+      "nextFocus": "phone"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "offer": {
+        "sectionHeight": 560,
+        "imageLoaded": true,
+        "button": {
+          "width": 310,
+          "height": 46,
+          "top": 495.84375,
+          "bottom": 541.84375
+        },
+        "overflow": false,
+        "programWords": 634,
+        "ctaCount": 7
+      },
+      "after": {
+        "focus": "name",
+        "tariff": "Базовый — 3 900 ₽",
+        "formHeight": 470
+      },
+      "nextFocus": "phone"
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "offer": {
+        "sectionHeight": 448,
+        "imageLoaded": true,
+        "button": {
+          "width": 280,
+          "height": 46,
+          "top": 368.84375,
+          "bottom": 414.84375
+        },
+        "overflow": false,
+        "programWords": 634,
+        "ctaCount": 7
+      },
+      "after": {
+        "focus": "name",
+        "tariff": "Базовый — 3 900 ₽",
+        "formHeight": 470
+      },
+      "nextFocus": "phone"
+    }
+  ],
+  "photoViews": 5,
+  "photoClicks": 4,
+  "diagnosticPhotoClicks": 4,
+  "versions": [
+    "photo-cta-v1"
+  ],
+  "bad": [],
+  "errors": []
+}

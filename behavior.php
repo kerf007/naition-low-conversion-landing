@@ -7,7 +7,7 @@ header('Cache-Control: no-store');
 
 const ALLOWED_EVENTS = [
     'page_view' => ['mobile', 'tablet', 'desktop'],
-    'cta_view' => ['hero', 'about', 'program', 'pricing_1', 'pricing_2', 'pricing_3'],
+    'cta_view' => ['hero', 'about', 'program', 'photo', 'pricing_1', 'pricing_2', 'pricing_3'],
     'program_view' => [''],
     'program_open' => ['module_1', 'module_2', 'module_3', 'module_4', 'module_5', 'module_6'],
     'program_close' => ['module_1', 'module_2', 'module_3', 'module_4', 'module_5', 'module_6'],
@@ -18,7 +18,7 @@ const ALLOWED_EVENTS = [
     'scroll_depth' => ['25', '50', '75'],
     'scroll_checkpoint' => ['10', '25', '50', '75', '90', '100'],
     'section_enter' => ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9', 's10', 's11', 's12'],
-    'cta_click' => ['hero', 'about', 'program', 'pricing_1', 'pricing_2', 'pricing_3'],
+    'cta_click' => ['hero', 'about', 'program', 'photo', 'pricing_1', 'pricing_2', 'pricing_3'],
     'pricing_link_click' => [''],
     'content_click' => ['.meta-card', '.feature-card', '.program-module', '.injury-card', '.legal-block', '.instructor-card', '.pricing-card'],
     'form_start' => [''],

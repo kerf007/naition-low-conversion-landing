@@ -8,7 +8,7 @@ const FIELDS = ['name', 'phone', 'email', 'purpose'];
 const NODES = ['form', 'summary', 'submit', 'name', 'phone', 'email', 'purpose',
     'label_name', 'label_phone', 'label_email', 'label_purpose'];
 const EVENTS = [
-    'context' => [''], 'cta' => ['hero', 'about', 'program', 'pricing_1', 'pricing_2', 'pricing_3'],
+    'context' => [''], 'cta' => ['hero', 'about', 'program', 'photo', 'pricing_1', 'pricing_2', 'pricing_3'],
     'scroll_requested' => [''], 'scroll_settled' => [''], 'form_arrival' => ['initial', 'return'],
     'exposure_start' => ['form', 'summary', 'submit', 'name', 'phone', 'email', 'purpose'],
     'exposure_end' => ['form', 'summary', 'submit', 'name', 'phone', 'email', 'purpose'],
@@ -86,6 +86,7 @@ try {
                 ['course-flow-v1', 'price3900-course-flow'],
                 ['program-outcomes-v1', 'price3900-program-outcomes'],
                 ['photo-removal-v1', 'price3900-photo-removal'],
+                ['photo-cta-v1', 'price3900-photo-cta'],
             ], true)
             || !is_array($data['events']) || !array_is_list($data['events'])
             || count($data['events']) < 1 || count($data['events']) > 8) reply(400, ['ok'=>false, 'error'=>'Invalid batch']);

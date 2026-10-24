@@ -1,0 +1,94 @@
+{
+  "version": "26d8df5",
+  "server": {
+    "visits_count": 101,
+    "orders_count": 29,
+    "generated_at": "2026-10-24T17:07:44+00:00"
+  },
+  "current": {
+    "visits": 101,
+    "events": {
+      "page_view": 101,
+      "page_exit": 101,
+      "cta_click": 100,
+      "form_view": 100,
+      "form_field_view": 100,
+      "form_submit_view": 100,
+      "form_start": 29,
+      "field_input": 29,
+      "form_success": 29,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 101,
+      "program_open": 0,
+      "program_close": 0
+    },
+    "cta_without_input": 71,
+    "cta_and_first_field": 100,
+    "cta_and_submit_view": 100,
+    "cta_details": {
+      "hero": 100
+    },
+    "viewports": {
+      "desktop": 101
+    },
+    "median_seconds": {
+      "input_to_success": 4.282,
+      "cta_to_success": 10.038
+    },
+    "field_names": {
+      "email": 29,
+      "name": 29,
+      "phone": 29
+    }
+  },
+  "excluded": [
+    {
+      "visitId": "a699b5bd-b642-4d19-abdc-88f48bbb15fd",
+      "reason": "No page_view; previous diagnostic UI course-flow-v1"
+    }
+  ],
+  "diagnostics": {
+    "visits": 101,
+    "counts": {
+      "attempts": 132,
+      "scroll_requested": 132,
+      "focus_requested": 132,
+      "form_arrival": 132,
+      "focus": 132,
+      "input": 29,
+      "success": 29,
+      "pointer_attempt": 29,
+      "returned": 100,
+      "autofocus_without_input": 103,
+      "success_branch": 29
+    },
+    "obstacles": {},
+    "sequence_gaps": 0,
+    "median_seconds": {
+      "return_to_focus": null,
+      "return_to_exit": null
+    },
+    "versions": [
+      "preinput-v1"
+    ],
+    "ui_versions": [
+      "photo-removal-v1"
+    ]
+  },
+  "comparison": {
+    "control": "3be7954",
+    "fisher_p": 0.10443146715834337,
+    "wilson95": [
+      0.2079764185547055,
+      0.3818804903085987
+    ],
+    "delta": -0.1148320714424384,
+    "difference95": [
+      -0.240053426537802,
+      0.015792473298843784
+    ]
+  }
+}

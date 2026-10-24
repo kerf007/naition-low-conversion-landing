@@ -1,0 +1,36 @@
+{
+  "success": {
+    "visits": 29,
+    "cta_count_distribution": {
+      "2": 7,
+      "1": 22
+    },
+    "available_after_cta": 29,
+    "available_final": 29,
+    "ended": 29,
+    "limited": 0,
+    "returned": 29
+  },
+  "no_input": {
+    "visits": 71,
+    "cta_count_distribution": {
+      "1": 46,
+      "2": 25
+    },
+    "available_after_cta": 71,
+    "available_final": 71,
+    "ended": 71,
+    "limited": 0,
+    "returned": 71
+  },
+  "no_cta": [
+    {
+      "visitId": "bd0fb561-8ee2-4558-ab30-c679582cea08",
+      "ended": true
+    }
+  ],
+  "page_heights": {
+    "5779": 72,
+    "5780": 29
+  }
+}
