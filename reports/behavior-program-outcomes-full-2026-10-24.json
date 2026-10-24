@@ -1,0 +1,94 @@
+{
+  "version": "f9578ae",
+  "server": {
+    "visits_count": 101,
+    "orders_count": 32,
+    "generated_at": "2026-10-24T14:56:10+00:00"
+  },
+  "current": {
+    "visits": 101,
+    "events": {
+      "page_view": 101,
+      "page_exit": 101,
+      "cta_click": 100,
+      "form_view": 100,
+      "form_field_view": 100,
+      "form_submit_view": 100,
+      "form_start": 32,
+      "field_input": 32,
+      "form_success": 32,
+      "form_error": 0,
+      "form_invalid": 0,
+      "form_abandon": 0,
+      "pricing_link_click": 0,
+      "program_view": 101,
+      "program_open": 0,
+      "program_close": 0
+    },
+    "cta_without_input": 68,
+    "cta_and_first_field": 100,
+    "cta_and_submit_view": 100,
+    "cta_details": {
+      "hero": 100
+    },
+    "viewports": {
+      "desktop": 101
+    },
+    "median_seconds": {
+      "input_to_success": 4.277,
+      "cta_to_success": 10.225
+    },
+    "field_names": {
+      "phone": 32,
+      "email": 32,
+      "name": 32
+    }
+  },
+  "excluded": [
+    {
+      "visitId": "a699b5bd-b642-4d19-abdc-88f48bbb15fd",
+      "reason": "No page_view; diagnostic UI belongs to previous course-flow-v1"
+    }
+  ],
+  "diagnostics": {
+    "visits": 101,
+    "counts": {
+      "attempts": 122,
+      "scroll_requested": 122,
+      "focus_requested": 122,
+      "form_arrival": 122,
+      "focus": 122,
+      "input": 32,
+      "success": 32,
+      "pointer_attempt": 32,
+      "returned": 100,
+      "autofocus_without_input": 90,
+      "success_branch": 32
+    },
+    "obstacles": {},
+    "sequence_gaps": 0,
+    "median_seconds": {
+      "return_to_focus": null,
+      "return_to_exit": null
+    },
+    "versions": [
+      "preinput-v1"
+    ],
+    "ui_versions": [
+      "program-outcomes-v1"
+    ]
+  },
+  "comparison": {
+    "control": "3be7954",
+    "fisher_p": 0.24254170683780793,
+    "wilson95": [
+      0.23423526311676776,
+      0.4128509142772382
+    ],
+    "delta": -0.08512910114540867,
+    "difference95": [
+      -0.21255543547890632,
+      0.04641771601139616
+    ]
+  }
+}

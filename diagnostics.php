@@ -85,6 +85,7 @@ try {
                 ['program-copy-v1', 'price3900-program-copy'],
                 ['course-flow-v1', 'price3900-course-flow'],
                 ['program-outcomes-v1', 'price3900-program-outcomes'],
+                ['photo-removal-v1', 'price3900-photo-removal'],
             ], true)
             || !is_array($data['events']) || !array_is_list($data['events'])
             || count($data['events']) < 1 || count($data['events']) > 8) reply(400, ['ok'=>false, 'error'=>'Invalid batch']);

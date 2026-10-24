@@ -1,0 +1,86 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "before": {
+        "height": 6312,
+        "images": 1,
+        "sections": 6,
+        "programHeight": 521,
+        "programWords": 634,
+        "formHeight": 220,
+        "overflow": false
+      },
+      "after": {
+        "height": 5808,
+        "images": 0,
+        "sections": 5,
+        "programHeight": 521,
+        "programWords": 634,
+        "formHeight": 220,
+        "overflow": false
+      },
+      "removedHeight": 504,
+      "imageRequests": 0,
+      "pageViewHeight": 5808
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "before": {
+        "height": 10663,
+        "images": 1,
+        "sections": 6,
+        "programHeight": 641,
+        "programWords": 634,
+        "formHeight": 470,
+        "overflow": false
+      },
+      "after": {
+        "height": 10103,
+        "images": 0,
+        "sections": 5,
+        "programHeight": 641,
+        "programWords": 634,
+        "formHeight": 470,
+        "overflow": false
+      },
+      "removedHeight": 560,
+      "imageRequests": 0,
+      "pageViewHeight": 10103
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "before": {
+        "height": 11081,
+        "images": 1,
+        "sections": 6,
+        "programHeight": 761,
+        "programWords": 634,
+        "formHeight": 470,
+        "overflow": false
+      },
+      "after": {
+        "height": 10633,
+        "images": 0,
+        "sections": 5,
+        "programHeight": 761,
+        "programWords": 634,
+        "formHeight": 470,
+        "overflow": false
+      },
+      "removedHeight": 448,
+      "imageRequests": 0,
+      "pageViewHeight": 10633
+    }
+  ],
+  "expanded": "true",
+  "focus": "name",
+  "diagnosticVersions": [
+    "photo-removal-v1"
+  ],
+  "errors": [],
+  "bad": []
+}

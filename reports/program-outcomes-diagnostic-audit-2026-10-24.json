@@ -1,0 +1,26 @@
+{
+  "success": {
+    "visits": 32,
+    "cta_count_distribution": {
+      "1": 22,
+      "2": 10
+    },
+    "available_after_cta": 32,
+    "available_final": 32,
+    "ended": 32,
+    "limited": 0,
+    "returned": 32
+  },
+  "no_input": {
+    "visits": 68,
+    "cta_count_distribution": {
+      "1": 56,
+      "2": 12
+    },
+    "available_after_cta": 68,
+    "available_final": 68,
+    "ended": 68,
+    "limited": 0,
+    "returned": 68
+  }
+}

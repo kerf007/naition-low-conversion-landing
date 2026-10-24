@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const viewport = window.innerWidth < 720 ? 'mobile' : window.innerWidth < 1024 ? 'tablet' : 'desktop';
-    trackOnce('page_view', viewport);
 
     document.querySelectorAll('.program-module').forEach((module, index) => {
         const toggle = module.querySelector('.module-toggle');
@@ -85,6 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
             track(expanded ? 'program_open' : 'program_close', `module_${index + 1}`);
         });
     });
+
+    // Measure the initial layout after the accordion has been collapsed.
+    trackOnce('page_view', viewport);
 
     const setupVisibilityTracking = () => {
         if (!('IntersectionObserver' in window)) {

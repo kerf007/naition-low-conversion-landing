@@ -1,0 +1,20 @@
+{
+  "success": {
+    "visits": 32,
+    "opened": 0,
+    "open_events": 0,
+    "modules": {},
+    "open_module_distribution": {
+      "0": 32
+    }
+  },
+  "no_success": {
+    "visits": 69,
+    "opened": 0,
+    "open_events": 0,
+    "modules": {},
+    "open_module_distribution": {
+      "0": 69
+    }
+  }
+}

@@ -237,16 +237,6 @@ img {
     margin-bottom: 0;
 }
 
-.emotional-photo {
-    padding: 0;
-}
-
-.emotional-photo img {
-    width: 100%;
-    height: min(70vh, 560px);
-    object-fit: cover;
-}
-
 .instructors-grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
@@ -567,21 +557,6 @@ img {
 
 .program-module-body p {
     margin: 0;
-}
-
-.module-outcomes-title {
-    margin: 0 0 8px;
-    font-size: 1rem;
-    color: var(--heading);
-}
-
-.module-outcomes {
-    margin: 0 0 16px;
-    padding-left: 22px;
-}
-
-.module-outcomes li + li {
-    margin-top: 4px;
 }
 
 .program-module.is-collapsed .program-module-body {
